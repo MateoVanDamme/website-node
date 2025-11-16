@@ -1,14 +1,9 @@
 -
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Bachelor project', path: '/bachelor-project' },
-    { name: 'Master thesis', path: '/master-thesis' },
-    { name: '(Sm)Art Path', path: '/art-path' },
-    { name: 'Scene generation', path: '/scene-generation' },
-    { name: 'Quarkus project', path: '/quarkus' },
-    { name: 'Virtual army', path: '/virtual-army' },
     { name: 'Astrophotography', path: '/astrophotography' },
-    { name: '3D Printing', path: '/3d-printing' }
+    { name: '3D Printing', path: '/3d-printing' },
+    { name: 'Portfolio', path: 'https://mateovandamme.github.io/website/', external: true }
   ];
 
 nav.navbar.navbar-expand-lg.bg-dark.navbar-dark
@@ -17,7 +12,10 @@ nav.navbar.navbar-expand-lg.bg-dark.navbar-dark
     button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
       span.navbar-toggler-icon
     #navbarNav.collapse.navbar-collapse
-      ul.navbar-nav.ms-auto
+      ul.navbar-nav
         each item in navItems
           li.nav-item
-            a.nav-link(href=item.path class=(activePage === item.name ? 'active' : ''))= item.name
+            if item.external
+              a.nav-link(href=item.path target="_blank" rel="noopener noreferrer")= item.name
+            else
+              a.nav-link(href=item.path class=(activePage === item.name ? 'active' : ''))= item.name
