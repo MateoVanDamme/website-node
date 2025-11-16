@@ -6,7 +6,7 @@ block content
       img.img-fluid(src="/images/mateo-cropped.jpg" alt="Mateo Van Damme" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;")
 
     .col-lg-9
-      p.lead.text-white Welcome to my portfolio. This website showcases a curated collection of projects that I have undertaken throughout my academic journey at UGent, as well as personal projects. Whether you have questions, collaboration opportunities, or simply wish to connect, feel free to reach out to me at mateovandamme1@gmail.com or through my socials below. I look forward to sharing my experiences and insights with you.
+      p.lead.text-white Welcome to my personal website. Here you'll find my photography and creative projects. Whether you have questions, collaboration opportunities, or simply wish to connect, feel free to reach out to me at mateovandamme1@gmail.com or through my socials below.
 
       .d-flex.gap-2.mb-3.justify-content-center
         //- LinkedIn
@@ -29,69 +29,7 @@ block content
           svg(xmlns="http://www.w3.org/2000/svg" width="24" height="16" fill="currentColor" viewBox="0 0 16 16")
             path(d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z")
 
-  .py-4.row
-    //- First column
-    .col-lg-4
-      //- System design - Bachelor project
-      .card.clickable.text-center.mb-4(onclick="window.location.href='/bachelor-project'")
-        img.card-img-top(src="/images/bachelor-project-JDN/Dall-E/beaching3.jpg" alt="Bachelor project")
-        .card-body
-          h5.card-title System design
-          p.lead Bachelor project for JDN Group
-          p.card-text To complete my bacherlor degree at UGent my team created a software solution for Jan De Nul Group from scratch. A drone flies above buoys with a sensor suite including GPS and a live camera feed. This information is later used to triangulate the GPS coordinates.
-          p.tags Topics: system design, python, computer vision, containerisation, docker, machine learning.
-
-      //- Computer graphics
-      .card.clickable.text-center.mb-4(onclick="window.location.href='/scene-generation'")
-        video.card-img-top(autoplay muted loop)
-          source(src="https://storage.googleapis.com/mateo-website-bucket/Natural%20World.mp4" type="video/mp4")
-        .card-body
-          h5.card-title Computer Graphics
-          p.lead Natural scene in Three.js
-          p.card-text The end of year project for my Computer Graphics course. This project uses the Three.Js framework to bring a virtual world to life. The project is available #[a(href="https://mcabla.github.io/3D-rendering/" target="_blank") online] and includes multiple demos. In addition to purely graphical shaders the projected also touches on other topics such as boids (swarm behavior), procedural terrain generation with LOD's and general system design. Balancing visual appearance with performance was key.
-          p.tags Topics: Three.js, algorithms, system design, webgl, glsl, javascript, computer graphics
-
-      //- Quarkus project
-      .card.clickable.text-center.mb-4(onclick="window.location.href='/quarkus'")
-        img.card-img-top(src="/images/quarkus/Dall-E/museum-hallway.jpg" alt="Quarkus project")
-        .card-body
-          h5.card-title System design
-          p.lead Quarkus Java Project
-          p.card-text In my last year at the UGent I developed a large scale distributed application in Java as part of my system design class. It simulates the backend of a museum. Users can book guided tours, security take up posts in shifts and curators manage exhibitions.
-          p.tags Topics: java, quarkus, kubernetes, distributed applications
-
-    //- Middle column
-    .col-lg-4
-      //- Master Thesis
-      .card.clickable.text-center.mb-4(onclick="window.location.href='/master-thesis'")
-        div(style="position: relative; display: inline-block;")
-          img.card-img-top(src="/images/master-thesis/JET_vessel_internal_view_mascot.jpg" alt="Master thesis")
-          a(href="https://www.euro-fusion.org/media-library/fusion-experiments/" style="position: absolute; bottom: 0; right: 0; color: white; background-color: gray; font-size: 0.8em;") EUROfusion/CC BY 4.0
-        .card-body
-          h5.card-title System design
-          p.lead Master Thesis 2023 - Master of Science in Information Engineering Technology
-          p.card-text I was fortunate enough to take on my joint thesis at the Infusion research unit at UGent. I completed it together with my talented colleague-student Casper Haems. The paper itself is unfortunately under an embargo until it gets cleared by JET. I can however say that I got a 18/20 and that a paper that will be published is currently being written based on our research.
-          p.tags Topics: system design, data science, python, machine learning
-
-      //- Computer vision - Art Path
-      .card.clickable.text-center.mb-4(onclick="window.location.href='/art-path'")
-        img.card-img-top(src="/images/art-path/pipeline.png" alt="Art Path")
-        .card-body
-          h5.card-title Computer Vision
-          p.lead (Sm)Art Path: indoor localization through painting recognition
-          p.card-text This UGent project uses computer vision algorithms to figure out the location of the user in a museum based on a video. The user walks around the museum and films his surroundings. Based on this video and a pre-existing database of paintings an algorithm calculates the probable location. An estimation for the path is also presented.
-          p.tags Topics: system design, python, opencv, machine learning, computer vision
-
-      //- DevOps - Virtual Army
-      .card.clickable.text-center.mb-4(onclick="window.location.href='/virtual-army'")
-        img.card-img-top(src="/images/virtual-army/Dall-E/virtual-army1.jpg" alt="Virtual Army")
-        .card-body
-          h5.card-title Virtual Army
-          p.lead Java project for DevOps
-          p.card-text This project was part of my Devops course. The class was divided into teams that competed against each other in an online turn based strategy game. The best teams got extra marks on their final exam!
-          p.tags Topics: java, devops, gitlab, pipelines, resiliency, failover
-
-    //- Third column
+  .py-4.row.justify-content-center
     .col-lg-4
       //- Astrophotography
       .card.clickable.text-center.mb-4(onclick="window.location.href='/astrophotography'")
@@ -102,10 +40,22 @@ block content
           p.card-text I've been taking pictures of the night sky since 2018. I also made my own rotating platform to take long exposure photographs. Build instructions, code and talks are available here.
           p.tags Topics: pictures, presentation, open-source, javascript, bluetooth BLE, microcontroller
 
+    .col-lg-4
       //- 3D Printing
-      .card.clickable.text-center.mb-4(onclick="window.location.href='https://www.printables.com/@MateoVanDamme_195493'")
+      .card.clickable.text-center.mb-4(onclick="window.location.href='/3d-printing'")
         img.card-img-top(src="/images/3D-printer.png" alt="3D Printing")
         .card-body
           h5.card-title 3D printing
+          p.lead Functional 3D designs
           p.card-text In my spare time I also enjoy 3D modeling as a creative outlet. My main focus are functional parts: parts for my telescope, holders, rasppberry pi cases etc...
           p.tags Topics: CAD-modeling, Fusion360, creativity, design, usability
+
+    .col-lg-4
+      //- Art
+      .card.clickable.text-center.mb-4(onclick="window.location.href='/art'")
+        img.card-img-top(src="/images/3D-printer.png" alt="Generative Art" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem;")
+        .card-body
+          h5.card-title Art
+          p.lead BYOB Generative Art
+          p.card-text Interactive particle visualizations that transform real-time data into flowing visual experiences. My BYOB (bring your own beamer) projects use WebGL to create audio-reactive and webcam-based art installations.
+          p.tags Topics: WebGL, generative-art, particles, audio-reactive, Three.js

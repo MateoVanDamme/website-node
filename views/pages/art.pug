@@ -1,0 +1,78 @@
+extends ../layout
+
+block content
+  .d-flex.flex-column.mb-5
+    p.lead.text-center
+      | My BYOB (bring your own beamer) generative art projects. These are interactive installations
+      | that transform real-time data into flowing visual experiences using WebGL and particle systems.
+
+    .d-flex.gap-2.mb-3.justify-content-center
+      a.btn(href="https://nerdlab.be/byob" target="_blank" rel="noopener noreferrer" style="background-color: white; color: #333; border: 1px solid #ddd;")
+        img(src="/images/logos/nerdlab-glasses.svg" alt="Nerdlab" style="height: 20px; margin-right: 8px; vertical-align: middle;")
+        |  BYOB Event
+
+  .row.mb-4
+    .col-lg-6.mb-4.mb-lg-0
+      .card.h-100
+        .card-body
+          h5.card-title Flow Viz
+          .d-flex.gap-2.mb-3
+            a.btn(href="https://mateovandamme.github.io/flow-viz/" target="_blank" rel="noopener noreferrer" style="background-color: #2196F3; color: white; border: none;") Live Demo
+            a.btn(href="https://github.com/MateoVanDamme/flow-viz" target="_blank" rel="noopener noreferrer" style="background-color: #333; color: white; border: none;")
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+                path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+              | GitHub
+          p.card-text.mb-3
+            | A real-time generative artwork that transforms ambient sound into flowing rivers of light.
+            | Uses live microphone input to analyze frequencies and drive 50,000 particles across the screen.
+          .feature-list
+            .feature-item
+              span.feature-label Bass frequencies
+              span  → wave patterns
+            .feature-item
+              span.feature-label Mid-range sounds
+              span  → turbulence effects
+            .feature-item
+              span.feature-label High frequencies
+              span  → chaotic energy bursts
+          p.card-text.small.text-muted.mt-3
+            | Built with WebGL and JavaScript. Each viewing experience is unique based on the ambient sonic environment.
+
+    .col-lg-6.mb-4.mb-lg-0
+      .card.h-100
+        .card-body
+          h5.card-title Flow Field
+          .d-flex.gap-2.mb-3
+            a.btn(href="https://mateovandamme.github.io/flow-field/" target="_blank" rel="noopener noreferrer" style="background-color: #2196F3; color: white; border: none;") Live Demo
+            a.btn(href="https://github.com/MateoVanDamme/flow-field" target="_blank" rel="noopener noreferrer" style="background-color: #333; color: white; border: none;")
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+                path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+              | GitHub
+          p.card-text.mb-3
+            | An interactive particle visualization where edges detected in your camera feed guide 50,000 particles to float along them.
+            | When no edges are present, the particles follow organic Perlin noise patterns. All edge detection runs on the GPU in real-time.
+          .feature-list
+            .feature-item
+              span.feature-label 50,000 particles
+              span  following flow fields
+            .feature-item
+              span.feature-label Sobel edge detection
+              span  processed on GPU
+            .feature-item
+              span.feature-label Real-time webcam
+              span  influence on particle flow
+          p.card-text.small.text-muted.mt-3
+            | Built with Three.js. Press "D" to toggle control panels. Requires webcam permission for full functionality.
+
+  style.
+    .feature-list {
+      margin-top: 1rem;
+    }
+    .feature-item {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .feature-label {
+      color: #2196F3;
+      font-weight: 600;
+    }

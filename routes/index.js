@@ -9,54 +9,6 @@ router.get('/', (req, res) => {
   });
 });
 
-// Bachelor project
-router.get('/bachelor-project', (req, res) => {
-  res.render('pages/bachelor-project', {
-    title: 'Bachelor Project',
-    activePage: 'Bachelor project'
-  });
-});
-
-// Master thesis
-router.get('/master-thesis', (req, res) => {
-  res.render('pages/master-thesis', {
-    title: 'Master Thesis',
-    activePage: 'Master thesis'
-  });
-});
-
-// Art Path
-router.get('/art-path', (req, res) => {
-  res.render('pages/art-path', {
-    title: '(Sm)Art Path',
-    activePage: '(Sm)Art Path'
-  });
-});
-
-// Scene generation
-router.get('/scene-generation', (req, res) => {
-  res.render('pages/scene-generation', {
-    title: 'Scene Generation',
-    activePage: 'Scene generation'
-  });
-});
-
-// Quarkus project
-router.get('/quarkus', (req, res) => {
-  res.render('pages/quarkus', {
-    title: 'Quarkus Project',
-    activePage: 'Quarkus project'
-  });
-});
-
-// Virtual army
-router.get('/virtual-army', (req, res) => {
-  res.render('pages/virtual-army', {
-    title: 'Virtual Army',
-    activePage: 'Virtual army'
-  });
-});
-
 // Astrophotography
 router.get('/astrophotography', (req, res) => {
   res.render('pages/astrophotography', {
@@ -73,4 +25,70 @@ router.get('/3d-printing', (req, res) => {
   });
 });
 
+// Art
+router.get('/art', (req, res) => {
+  res.render('pages/art', {
+    title: 'Art',
+    activePage: 'Art'
+  });
+});
+
+// API endpoint to fetch Printables user stats
+router.get('/api/printables-stats', async (req, res) => {
+  try {
+    const userId = 195493;
+
+    // Query to fetch user profile data with print stats
+    const query = `
+      query UserProfile($id: ID!) {
+        user(id: $id) {
+          id
+          publicUsername
+          handle
+          publishedPrintsCount
+          latestPublishedPrints {
+            id
+            downloadCount
+            likesCount
+          }
+          badgesProfileLevel {
+            profileLevel
+          }
+        }
+      }
+    `;
+
+    const response = await fetch('https://api.printables.com/graphql/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept-Language': 'en-US'
+      },
+      body: JSON.stringify({
+        operationName: 'UserProfile',
+        query: query,
+        variables: { id: userId }
+      })
+    });
+
+    const data = await response.json();
+
+    // Aggregate download and like counts from prints
+    if (data.data && data.data.user && data.data.user.latestPublishedPrints) {
+      const prints = data.data.user.latestPublishedPrints;
+      const totalDownloads = prints.reduce((sum, print) => sum + (print.downloadCount || 0), 0);
+      const totalLikes = prints.reduce((sum, print) => sum + (print.likesCount || 0), 0);
+
+      data.data.user.totalDownloads = totalDownloads;
+      data.data.user.totalLikes = totalLikes;
+    }
+
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching Printables stats:', error);
+    res.status(500).json({ error: 'Failed to fetch stats' });
+  }
+});
+
 module.exports = router;
+ 

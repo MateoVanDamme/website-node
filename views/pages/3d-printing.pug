@@ -1,29 +1,112 @@
 extends ../layout
 
 block content
-  .row.py-5
-    .col-lg-3
-    .col-lg-6.text-center
-      h2.mb-4 3D Printing Portfolio
+  .d-flex.flex-column.mb-5
+    p.lead.text-center
+      | This page showcases my 3D printing projects and designs. My main focus is on functional parts:
+      | telescope accessories, holders, raspberry pi cases, and other practical designs.
+      | All my models are available for free on Printables.com.
 
-      p.lead.mb-4
-        | My 3D printing models and designs are hosted on Printables.com
+    .d-flex.gap-2.mb-3.justify-content-center
+      a.btn.btn-primary(href="https://www.printables.com/@MateoVanDamme_195493" target="_blank" rel="noopener noreferrer" style="background-color: #fb6731; border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24.344 35" fill="currentColor" style="margin-right: 8px;")
+          path(d="m0 35 12.172-7L0 21ZM12.172 0 0 7l12.172 7v14l12.172-7V7Z")
+        |  My Models
 
-      img.img-fluid.mb-4(src="/images/3D-printer.png" alt="3D Printing" style="max-width: 400px;")
+  .row.mb-4
+    .col-lg-4.mb-4.mb-lg-0
+      .card.h-100.text-center
+        .card-body
+          h5.card-title My Printers
+          p.card-text
+            | I started with a #[strong Prusa Mini+] that I upgraded with a Revo hotend for improved reliability.
+            | I'm now using the #[strong Bambu Lab A1 Mini] (180 euros) for even more reliability and faster prints.
+          div.mt-4
+            img.img-fluid(src="/images/3D-printer.png" alt="3D Printing")
 
-      p.mb-4
-        | In my spare time I also enjoy 3D modeling as a creative outlet. My main focus are functional parts: parts for my telescope, holders, raspberry pi cases etc...
+    .col-lg-4.mb-4.mb-lg-0
+      .card.h-100
+        .card-body
+          h5.card-title.mb-4 Stats
+          .stats-horizontal
+            .stat-row
+              span.stat-number 15
+              span.stat-label.small-stat Models
+            .stat-row
+              span.stat-number 7,960
+              span.stat-label.small-stat Downloads
+            .stat-row
+              span.stat-number.small-number 987
+              span.stat-label Likes
+            .stat-row
+              span.stat-number.small-number 1,515
+              span.stat-label PrusaMeters earned
 
-      p.tags.mb-4
-        | Topics: CAD-modeling, Fusion360, creativity, design, usability
+          p.card-text.small.mt-4
+            | Prusa gives me PrusaMeters as rewards when people download and use my models. I can redeem these points for free filament spools.
+            | It's a cool concept - sharing is caring!
 
-      a.btn.btn-primary.btn-lg(href="https://www.printables.com/@MateoVanDamme_195493" target="_blank" rel="noopener noreferrer" style="background-color: rgb(238, 48, 47); border:none;")
-        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="margin-right: 8px;")
-          path(fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z")
-          path(fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z")
-        | Visit My Printables Profile
+    .col-lg-4.mb-4.mb-lg-0
+      .card.h-100
+        img.card-img-top(src="https://media.printables.com/media/prints/256778/images/2301984_66a81e7e-f09a-4f93-9409-aaef0664ae67/thumbs/inside/1920x1440/jpg/holder-iso-2.webp" alt="Micro SD Card Holder")
+        .card-body
+          h5.card-title Top Model
+          h6.mb-2
+            a.text-decoration-none(href="https://www.printables.com/model/256778-micro-sd-card-holder-2" target="_blank" rel="noopener noreferrer" style="color: #212529;") Micro SD Card Holder
+          p.card-text
+            | My SD card holder that holds 3 regular and 5 micro SD cards. Perfect for keeping your Raspberry Pi OS images
+            | organized, or for photographers who need to manage their memory cards.
+          .top-model-stats.mt-3
+            .d-flex.justify-content-between.mb-2
+              span Downloads
+              span.top-model-stat 3,730
+            .d-flex.justify-content-between.mb-2
+              span Likes
+              span.top-model-stat 545
+            .d-flex.justify-content-between
+              span Makes
+              span.top-model-stat 67
 
-      p.text-muted.mt-3
-        small You will be redirected to Printables.com
+  .row.mb-4
+    .col-lg-4
+      .card.mb-4
+        .card-body
+          h5.card-title CAD Design
+          p.card-text
+            | I settled on #[strong Fusion 360] because it has the correct balance of ease of use and capabilities for 3D printing applications.
+            | I use #[strong FreeCAD] when I have a couple of hours to waste.
 
-    .col-lg-3
+  style.
+    .stat-number {
+      font-size: 4.5rem;
+      font-weight: bold;
+      color: #fb6731;
+      line-height: 1;
+      display: inline;
+    }
+    .stat-number.small-number {
+      font-size: 3rem;
+    }
+    .stat-label {
+      font-size: 1.5rem;
+      color: #6c757d;
+      display: inline;
+      vertical-align: baseline;
+      margin-left: 0.5rem;
+    }
+    .stat-label.small-stat {
+      font-size: 1.2rem;
+    }
+    .stats-horizontal {
+      margin-top: 1.5rem;
+    }
+    .stat-row {
+      display: block;
+      text-align: left;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .top-model-stat {
+      font-weight: 600;
+      color: #fb6731;
+    }
