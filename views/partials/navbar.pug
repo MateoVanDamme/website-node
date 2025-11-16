@@ -1,0 +1,23 @@
+-
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Bachelor project', path: '/bachelor-project' },
+    { name: 'Master thesis', path: '/master-thesis' },
+    { name: '(Sm)Art Path', path: '/art-path' },
+    { name: 'Scene generation', path: '/scene-generation' },
+    { name: 'Quarkus project', path: '/quarkus' },
+    { name: 'Virtual army', path: '/virtual-army' },
+    { name: 'Astrophotography', path: '/astrophotography' },
+    { name: '3D Printing', path: '/3d-printing' }
+  ];
+
+nav.navbar.navbar-expand-lg.bg-dark.navbar-dark
+  .container-fluid
+    a.navbar-brand(href="/") Mateo Van Damme
+    button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        each item in navItems
+          li.nav-item
+            a.nav-link(href=item.path class=(activePage === item.name ? 'active' : ''))= item.name

@@ -1,0 +1,173 @@
+extends ../layout
+
+block content
+  .d-flex.flex-column.mb-5
+    p.lead.text-center
+      | I completed my joint thesis for the Infusion research unit at UGent, together with Casper Haems. The
+      | objective was applying
+      | machine
+      | learning to data from fusion devices to extract harmful anomalies that harm the reactor wall. Our
+      | algorithms improved significantly on existing open source methods.
+      | The thesis received a grade of 18/20 and was nominated for multiple competitions.
+
+    .d-flex.gap-2.mb-3.justify-content-center
+      a.btn.btn-primary(href="https://casper.wvg.be/home/" target="_blank" rel="noopener noreferrer" style="background-color: #ff9800; border:none;")
+        span(style="color: #111111;") Portfolio Casper Haems
+
+      a.btn.btn-primary(href="https://storage.googleapis.com/mateo-website-bucket/Thesis%20-%20Mateo%20Van%20Damme%20-%20Casper%20Haems.pdf" target="_blank" rel="noopener noreferrer" style="background-color: rgb(238, 48, 47); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16")
+          path(fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z")
+        |  Thesis PDF
+
+      a.btn.btn-primary(href="https://storage.googleapis.com/mateo-website-bucket/Grades%20and%20feedback%20-%20ELM%20detection%20thesis.pdf" target="_blank" rel="noopener noreferrer" style="background-color: rgb(238, 48, 47); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16")
+          path(fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z")
+        |  Grades and feedback
+
+      a.btn.btn-primary(href="https://infusion.ugent.be/" target="_blank" rel="noopener noreferrer" style="background-color: rgb(255,255,255); border:none; width: 6em;")
+        svg(version="1.1" width="48" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 61.8" style="enable-background:new 0 0 191 61.8;")
+          style(type="text/css").
+            .st0 { fill: #AE3E85; }
+          g#inf
+            path.st0(d="M6.2,21.2c1.9-1.3,3.3-2.3,4.3-2.9c1-0.5,1.8-0.8,2.3-0.8c0.8,0,1.2,0.4,1.2,1.3c0,0.2,0,0.5-0.1,0.7 c0,0.2-0.1,0.6-0.2,1.1L10,35.6c-0.2,0.6-0.3,1-0.3,1.2c0,0.2,0,0.5,0,0.8s0.1,0.5,0.2,0.7s0.3,0.3,0.5,0.3c0.5,0,1.5-0.5,3-1.5 l1.3-0.8l0.5,0.9c-1.2,0.9-2.2,1.6-3.1,2.2c-0.9,0.6-1.6,1.1-2.2,1.4c-0.6,0.4-1.1,0.6-1.5,0.8c-0.4,0.2-0.8,0.2-1.1,0.2 c-0.5,0-0.8-0.2-1.1-0.5s-0.4-0.8-0.4-1.4c0-1,0.2-2.3,0.6-3.8l3.3-11.9c0.1-0.4,0.2-0.8,0.3-1.2c0.1-0.5,0.1-0.8,0.1-1 c0-0.3-0.1-0.6-0.2-0.8C9.5,21,9.3,20.9,9,20.9c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0.1-0.6,0.3-1.1,0.7l-0.6,0.4l-1.6,1l-0.4-1L6.2,21.2z M14.4,6.1c0.5,0,1,0.2,1.3,0.6s0.5,0.9,0.5,1.5c0,1-0.3,1.8-0.8,2.4c-0.5,0.6-1.2,0.9-1.9,0.9c-0.6,0-1.1-0.2-1.5-0.5 c-0.4-0.4-0.5-0.9-0.5-1.5c0-0.9,0.3-1.6,0.9-2.3S13.7,6.1,14.4,6.1z")
+            path.st0(d="M19.5,21.2c1.8-1.3,3.3-2.3,4.3-2.8c1-0.6,1.8-0.8,2.3-0.8c0.8,0,1.1,0.5,1.1,1.6c0,0.3,0,0.5-0.1,0.9 c0,0.3-0.1,0.7-0.2,1.2l-1.9,8c0.7-0.9,1.3-1.7,1.8-2.4c0.5-0.7,1-1.3,1.5-1.9c0.5-0.6,0.9-1.1,1.4-1.5c0.5-0.5,0.9-0.9,1.4-1.4 c1.5-1.3,3-2.4,4.5-3.2c1.5-0.8,2.8-1.2,3.8-1.2c1,0,1.5,0.6,1.5,1.7c0,0.9-0.2,2.2-0.5,3.7L37,36.6c-0.1,0.3-0.1,0.7-0.1,1 c0,0.3,0.1,0.5,0.2,0.7c0.1,0.2,0.3,0.3,0.5,0.3c0.5,0,1.5-0.5,3-1.5l1.3-0.8l0.5,0.9c-1.2,0.9-2.2,1.6-3.1,2.2 c-0.9,0.6-1.6,1.1-2.2,1.4s-1.1,0.6-1.5,0.8c-0.4,0.2-0.8,0.2-1.1,0.2c-1,0-1.5-0.7-1.5-2c0-0.4,0-0.9,0.2-1.5 c0.1-0.6,0.3-1.3,0.5-2.3l2.6-10.5c0.2-0.8,0.3-1.5,0.4-2c0.1-0.5,0.1-1,0.1-1.5c0-0.8-0.3-1.2-0.8-1.2S34.7,21,34,21.4 s-1.5,0.9-2.2,1.5c-0.8,0.6-1.5,1.4-2.3,2.3C28.7,26.1,28,27,27.3,28c-0.6,0.9-1.1,1.7-1.5,2.6c-0.4,0.9-0.8,1.8-1.1,2.8 c-0.3,1-0.6,2.1-0.9,3.3S23.2,39.4,23,41c-0.6,0.1-1.1,0.2-1.7,0.4c-0.6,0.2-1.2,0.3-1.8,0.5l-0.3-0.5c0.5-1.8,1-3.7,1.5-5.7 s0.9-3.9,1.3-5.7c0.4-1.8,0.7-3.4,0.9-4.8s0.3-2.4,0.3-3.1c0-0.8-0.3-1.2-0.9-1.2c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0.1-0.6,0.3-1.1,0.7 c-0.3,0.2-0.5,0.3-0.6,0.4l-1.6,1l-0.3-1L19.5,21.2z")
+            path.st0(d="M53.5,22.4c-0.2,0.8-0.3,1.6-0.5,2.3c-0.2,0.7-0.3,1.4-0.5,2c-0.9,4.4-1.7,7.9-2.3,10.7 c-0.6,2.8-1.2,5-1.8,6.7c-0.6,1.7-1.1,3.1-1.7,4.1c-0.6,1-1.2,2-2,2.9c-1,1.2-2,2.1-3.3,2.8s-2.3,1.1-3.4,1.1c-0.3,0-0.6,0-0.9-0.1 c-0.3-0.1-0.6-0.2-0.8-0.3c0.1-0.1,0.2-0.3,0.2-0.6s0.2-0.7,0.3-1.1c0.1-0.4,0.2-0.8,0.3-1.2s0.2-0.7,0.2-1l0.7-0.2 c0.4,0.6,0.8,0.9,1.2,1.1c0.4,0.2,0.8,0.3,1.4,0.3c1.8,0,3.2-1.5,4.2-4.5c0.3-0.9,0.6-2,0.9-3.6s0.7-3.3,1.1-5.2 c0.4-2,0.8-4.1,1.2-6.4s0.8-4.7,1.2-7.1l0.4-2.8h-4l0.2-1.1c0.6-0.2,1.2-0.5,1.8-0.7c0.6-0.2,1.4-0.6,2.4-1.1l0.7-3.9 c0.3-1.4,0.6-2.5,0.9-3.4c0.3-0.8,0.8-1.5,1.3-2.1c0.3-0.3,0.7-0.7,1.3-1.2c0.6-0.5,1.2-1,1.9-1.5c0.7-0.5,1.3-0.9,1.9-1.3 s1-0.7,1.3-0.8c0.2-0.1,0.5-0.2,0.8-0.2s0.7-0.1,0.9-0.1c0.6,0,1.2,0.1,1.9,0.2c0.6,0.1,1.2,0.3,1.6,0.5l-0.2,0.7 c-0.2,0.5-0.4,1.1-0.6,1.7c-0.2,0.7-0.4,1.2-0.5,1.6L63.1,10c-0.4-0.6-0.9-1.1-1.5-1.4c-0.6-0.4-1.3-0.5-2.1-0.5 c-1.2,0-2.1,0.5-2.8,1.5c-0.7,1-1.3,2.5-1.7,4.7l-1,5.5h0.8c0.6,0,1.1,0,1.5,0s0.7,0,1,0s0.6-0.1,0.8-0.1s0.5-0.1,0.8-0.2l0.3-0.1 l0.2,0.3C59.3,20,59.2,20.5,59,21s-0.3,1-0.4,1.4L53.5,22.4L53.5,22.4z")
+          g#usion
+            path(d="M89.9,36.3c0,0.8,0,1.4,0.1,1.9c0,0.5,0.1,0.8,0.2,1.1c0.1,0.2,0.3,0.4,0.6,0.5s0.6,0.1,1,0.2l2,0.2v1.5 c-1.3-0.1-2.2-0.1-2.7-0.1c-0.6,0-1,0-1.4,0s-0.9,0-1.4,0s-1.4,0.1-2.7,0.1c0-0.6,0.1-1.1,0.1-1.5s0.1-0.8,0.1-1.1 c0-0.3,0-0.6,0-0.9s0-0.6,0-1l-3.3,3.1c-1.5,1.3-3.3,1.9-5.6,1.9c-2.8,0-4.8-0.8-5.8-2.3c-0.4-0.6-0.7-1.4-0.9-2.3 s-0.2-2.2-0.2-3.9v-8.3c0-0.8,0-1.5-0.1-2s-0.2-0.8-0.3-1.1s-0.4-0.4-0.6-0.5s-0.7-0.1-1.2-0.1h-1.8v-1.4c2.6-0.3,5.2-1,7.7-2 l0.4,0.2V33c0,2.2,0.3,3.8,1,4.6c0.9,1,2.2,1.4,3.9,1.4c1.9,0,3.5-0.7,4.9-2.1c0.6-0.6,1-1.2,1.3-1.8s0.5-1.2,0.5-1.8v-8.1 c0-0.8,0-1.5-0.1-2s-0.2-0.8-0.3-1.1s-0.4-0.4-0.6-0.5s-0.7-0.1-1.2-0.1h-1.8v-1.4c2.6-0.3,5.2-1,7.7-2l0.4,0.2L89.9,36.3 L89.9,36.3z")
+            path(d="M98.3,34.3v2c0,1.3,0.6,2.3,1.7,3c1.2,0.8,2.6,1.2,4.5,1.2c1.8,0,3.2-0.4,4.3-1.3s1.7-1.9,1.7-3.3c0-1-0.2-1.7-0.7-2.2 c-0.5-0.5-1.3-0.9-2.4-1.2c-1.8-0.4-3.2-0.8-4.5-1.1s-2.2-0.7-2.9-1c-2.2-1-3.3-2.7-3.3-5.1c0-2.2,0.8-4,2.4-5.3 c1.6-1.3,3.9-1.9,6.8-1.9c1.1,0,2.1,0.1,3,0.3c0.9,0.2,2.1,0.5,3.5,1c-0.1,0.8-0.1,1.5-0.1,2.3c0,0.8-0.1,1.9-0.1,3.3h-1.4v-1.1 c0-1.2-0.6-2.1-1.7-2.9c-1.1-0.8-2.5-1.2-4.2-1.2c-1.5,0-2.7,0.3-3.5,1c-0.8,0.7-1.2,1.6-1.2,2.9c0,1.2,0.4,2,1.2,2.6 c0.8,0.6,2.2,1.1,4.2,1.5c1.1,0.2,2.1,0.4,2.8,0.6c0.8,0.2,1.4,0.4,2,0.6c0.6,0.2,1,0.4,1.4,0.7s0.7,0.5,1.1,0.9 c0.9,0.9,1.3,2.1,1.3,3.6c0,1.2-0.3,2.3-0.8,3.4c-0.5,1-1.3,1.9-2.3,2.6s-2.2,1.3-3.5,1.7c-1.4,0.4-2.8,0.6-4.5,0.6 c-1.2,0-2.2-0.1-3.3-0.3s-2.2-0.5-3.5-0.9c0.1-0.5,0.2-1,0.3-1.4c0.1-0.5,0.1-1,0.2-1.5s0.1-1.1,0.1-1.7c0-0.6,0-1.4,0-2.3 L98.3,34.3L98.3,34.3z")
+            path(d="M125.2,36.3c0,0.8,0,1.4,0.1,1.9s0.1,0.8,0.2,1c0.1,0.2,0.3,0.4,0.5,0.5c0.2,0.1,0.6,0.1,1,0.2l2.3,0.2v1.5 c-1.8,0-3.1-0.1-3.9-0.1c-0.9,0-1.6,0-2.2,0c-0.3,0-0.7,0-1,0s-0.8,0-1.2,0c-0.5,0-1,0-1.7,0s-1.4,0-2.3,0.1V40l2.3-0.2 c0.4,0,0.8-0.1,1-0.2c0.2-0.1,0.4-0.2,0.6-0.5c0.1-0.2,0.2-0.6,0.2-1c0-0.5,0.1-1.1,0.1-1.9V25.2c0-0.8,0-1.5-0.1-2 s-0.1-0.8-0.3-1.1c-0.1-0.2-0.4-0.4-0.6-0.5s-0.7-0.1-1.2-0.1H117v-1.4c2.6-0.3,5.2-1,7.7-2l0.4,0.2L125.2,36.3L125.2,36.3z M122.9,7.3c0.7,0,1.3,0.3,1.9,0.8s0.8,1.2,0.8,1.9c0,0.7-0.3,1.4-0.8,1.9s-1.2,0.8-1.9,0.8c-0.7,0-1.4-0.3-1.9-0.8 c-0.5-0.5-0.8-1.2-0.8-1.9c0-0.8,0.3-1.4,0.8-2C121.5,7.6,122.1,7.3,122.9,7.3z")
+            path(d="M144.3,18.1c1.6,0,3.2,0.3,4.6,0.9c1.4,0.6,2.6,1.4,3.6,2.4c1,1,1.8,2.2,2.4,3.6c0.6,1.4,0.9,3,0.9,4.6 c0,1.8-0.3,3.5-1,5.1s-1.6,2.9-2.7,4c-1.2,1.1-2.5,2-4.1,2.7c-1.6,0.6-3.3,1-5.2,1c-1.6,0-3.2-0.3-4.5-0.8 c-1.4-0.6-2.5-1.4-3.5-2.4s-1.7-2.3-2.2-3.8c-0.5-1.5-0.8-3.1-0.8-4.9c0-1.8,0.3-3.5,0.9-5c0.6-1.5,1.5-2.8,2.6-3.9 c1.1-1.1,2.4-1.9,3.9-2.5C140.8,18.4,142.4,18.1,144.3,18.1z M143.1,19.8c-2.1,0-3.7,0.8-4.9,2.3c-1.1,1.6-1.7,3.8-1.7,6.8 c0,1.8,0.2,3.4,0.6,4.8c0.4,1.5,0.9,2.7,1.6,3.7c0.7,1,1.6,1.8,2.5,2.4c1,0.6,2.1,0.8,3.3,0.8c2,0,3.6-0.8,4.8-2.5 c1.1-1.7,1.7-3.9,1.7-6.8c0-1.8-0.2-3.5-0.7-5.1s-1.2-3-2.1-4C146.9,20.6,145.2,19.8,143.1,19.8z")
+            path(d="M177.7,27.5c0-1.9-0.5-3.5-1.5-4.6c-1-1.1-2.3-1.7-4-1.7c-0.8,0-1.5,0.1-2.3,0.4s-1.4,0.6-2,1.1s-1.1,1-1.5,1.5 c-0.4,0.6-0.6,1.1-0.6,1.7v10.5c0,0.8,0,1.4,0.1,1.9s0.1,0.8,0.2,1c0.1,0.2,0.3,0.4,0.5,0.5c0.2,0.1,0.6,0.1,1,0.2l2.2,0.2v1.5 c-1.6-0.1-2.8-0.1-3.7-0.1c-0.9,0-1.7,0-2.5,0s-1.6,0-2.5,0s-2.1,0.1-3.7,0.1v-1.5l2.2-0.2c0.4,0,0.8-0.1,1-0.2 c0.2-0.1,0.4-0.2,0.6-0.5c0.1-0.2,0.2-0.6,0.2-1s0.1-1.1,0.1-1.9V25.2c0-0.8,0-1.5-0.1-2s-0.1-0.8-0.3-1.1 c-0.1-0.2-0.4-0.4-0.6-0.5s-0.7-0.1-1.2-0.1h-1.8v-1.4c2.6-0.3,5.2-1,7.7-2l0.4,0.2v4.3l3.8-3.3c0.5-0.5,1.1-0.8,1.7-1 s1.3-0.3,2.3-0.3c5.5,0,8.3,2.9,8.3,8.6v9.6c0,0.8,0,1.4,0.1,1.9c0,0.5,0.1,0.8,0.2,1.1c0.1,0.2,0.3,0.4,0.5,0.5s0.6,0.1,1,0.2 l2,0.2v1.5c-1.3-0.1-2.2-0.1-2.7-0.1c-0.6,0-1,0-1.4,0s-0.9,0-1.4,0c-0.5,0-1.4,0.1-2.5,0.1L177.7,27.5L177.7,27.5z")
+
+  .row.mb-5
+    .col-lg-6.d-flex.align-items-stretch
+      div
+        .card.mb-4
+          .card-body
+            h5.card-title Thesis description
+            p.card-text
+              | Nuclear fusion is an alternative to nuclear fission for generating substantial energy
+              | for our society. Unlike fission, fusion produces minimal hazardous waste products, and
+              | there is no risk of an uncontrollable reactor meltdown, as the fusion process naturally
+              | extinguishes when not actively sustained. A tokamak is a donut-shaped device used for
+              | researching nuclear fusion. Inside plasma is controlled and heated until a fusion
+              | reaction occurs.
+              br
+              br
+              | Within this device, fusion is accompanied by the occurrence of
+              | Edge-Localized Modes (ELMs), sudden bursts of energy that can potentially damage the
+              | reactor wall. This process is akin to a lid on a cooking pot vibrating as steam escapes.
+              | Considerable research is dedicated to the study of ELMs, for which ELMs must first be
+              | identified. This is a time-consuming and challenging process when done manually.
+              br
+              br
+              | Existing automatic methods have proven to be insufficiently effective for detecting
+              | small and irregular ELMs. The primary objective of this thesis is to develop algorithms
+              | capable of detecting various types of ELMs, including the challenging variants. Advanced
+              | techniques from various disciplines, such as computer vision, artificial intelligence,
+              | and stock market prediction methods, are applied in this endeavor. These methods are
+              | integrated into a well-designed framework, enabling the rapid development of new
+              | techniques and the straightforward evaluation of existing ones.
+
+    .col-lg-6.d-flex.align-items-stretch
+      .card.mb-4
+        div(style="position: relative; display: inline-block;")
+          img.card-img-top(src="/images/master-thesis/JET_vessel_internal_view_mascot.jpg" alt="Card image cap")
+          a(href="https://www.euro-fusion.org/media-library/fusion-experiments/" style="position: absolute; bottom: 0; right: 0; color: white; background-color: gray; font-size: 0.8em;") EUROfusion/CC BY 4.0
+        .card-body
+          h5.card-title JET (Joint European Torus)
+          p.card-text
+            | Most of the data used in the thesis originated from the JET fusion device. Located
+            | in
+            | Oxfordshire, UK, it is the largest fusion device on earth and will remain so until
+            | ITER
+            | becomes operational in 2025. The torus has an outer diamater of 3 metres and holds
+            | 90 cubic
+            | metres of plasma. During a single 'pulse' of operation up to 18 GB of data is
+            | collected.
+
+          small.text-muted
+            | Source:
+            a(href="https://euro-fusion.org/devices/jet/") https://euro-fusion.org/devices/jet/
+
+  .row.text-center.mb-5.mx-lg-auto
+    .col-lg-1.col-md-12
+    .col-lg-10.col-md-12.d-flex.flex-column
+      p.lead.text-white(style="font-style: italic;")
+        | "Mateo Van Damme did an excellent job in his
+        | master thesis.
+        br
+        | The
+        | volume of methods
+        | implemented was exceedingly impressive. The libraries written are of very high
+        | quality,
+        | using best practices in reusability, maintainability and extensibility, while
+        | conforming
+        | to standard design patterns. The documentation was extensive and the report was well
+        | written. Practically, Mateo displayed an innovative and creative spirit, while being
+        | resourceful and efficient. These qualities are especially important for industry or
+        | research."
+      .lead(style="color: #9999AA")
+        | - Jerome Alhage, Thesis Supervisor and researcher at Infusion
+    .col-lg-1.col-md-12
+
+  .row.mb-5
+    .card.mb-4
+      .card-body
+        h5.card-title Thesis results
+        p.card-text
+          ul
+            li
+              | The developed algorithms outperformed existing ones
+              | significantly, and are now used at Infusion to conduct ELM research.
+            li
+              | An article based on our research is currently being prepared for publication in an A1 journal, accompanied by the
+              | release of the source code.
+            li A grade of 18/20 was received.
+            li
+              | The thesis has been nominated for both the Future Proof
+              | Award and the Eos Prize 2023.
+
+    .card.mb-4
+      .card-body
+        h5.card-title Skills learned
+
+        .row.card-text
+          .col-lg-6
+            ul
+              li
+                | System design: I had the opportunity to contribute to the design of a
+                | significant project from its inception, under the guidance of an experienced
+                | Python developer who praised the quality of the work. This included working with
+                | abstract classes, mixins, multiple modules, testing, and CI/CD integration.
+              li
+                | Python proficiency: I gained extensive experience by writing a substantial
+                | amount of
+                | Python code, further enhancing my programming skills and understanding of the
+                | language.
+              li
+                | Collaborative work: My joint thesis demanded close cooperation with a fellow
+                | student, involving pair-programming and tracking progress with JIRA, which
+                | enhanced my ability to work effectively within a team and contribute
+                | collectively to a shared research goal.
+
+          .col-lg-6
+            ul
+              li
+                | Algorithmic innovation: We undertook the task of developing novel algorithms for
+                | ELM
+                | detection, surpassing the performance of existing methods. This experience
+                | enhanced
+                | my
+                | problem-solving and algorithmic design capabilities.
+              li
+                | Presentation skills: Our findings were effectively communicated through
+                | multiple presentations, where I explained complex algorithms using flowcharts
+                | and building blocks to a mixed audience (physics and technical), enhancing my
+                | ability to convey technical information.
+              li
+                | Data analysis: The initial phase of our research involved data
+                | analysis using pandas (python).
+              li
+                | Metric development: We created comprehensive metrics to assess the accuracy and
+                | effectiveness of our algorithms.

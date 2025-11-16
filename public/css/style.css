@@ -1,0 +1,23 @@
+/* body {
+    background-color: rgba(30, 30, 30, 1.00);
+} */
+
+/* Tags at the bottom of cards should get their own font */
+.tags {
+    color: #9999AA;
+    font-style: italic;
+}
+
+.card {
+    outline: 1px solid transparent; /* Transparent outline initially */
+}
+
+/* Cards are clickable */
+.card.clickable {
+    cursor: pointer;
+    transition: outline-color 0.3s; /* Smooth transition for the outline color */
+}
+
+.card.clickable:hover {
+    outline-color: white; /* White outline on hover */
+}

@@ -1,0 +1,35 @@
+{
+  "name": "website-node",
+  "version": "1.0.0",
+  "description": "node based personal portfolio",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateoVanDamme/website-node.git"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "art",
+    "astrophotography",
+    "3dprinting"
+  ],
+  "author": "mateo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateoVanDamme/website-node/issues"
+  },
+  "homepage": "https://github.com/MateoVanDamme/website-node#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

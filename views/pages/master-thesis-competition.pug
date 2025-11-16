@@ -1,0 +1,303 @@
+extends ../layout
+
+block content
+  .row.mb-5
+    .col-lg-2.d-flex
+    .col-lg-8.d-flex
+      .d-flex.flex-column
+        p.lead.mb-4
+          | Casper en ik zijn enorm blij met jullie te kunnen delen dat onze thesis is
+          | genomineerd voor zowel de Future Proef Award als de Eosprijs 2023. Wij zouden het
+          | enorm
+          | appreciëren als jullie ons zouden willen steunen door te stemmen op onderstaande
+          | links.
+
+        .d-flex.gap-2.mb-5.justify-content-center
+          a.btn.btn-primary(href="https://www.futureproef.be/stemmenpublieksprijs" target="_blank" rel="noopener noreferrer" style="background-color: rgb(238, 48, 47); border:none;")
+            | Stem Future Proef Award
+
+          a.btn.btn-primary(href="https://www.eoswetenschap.eu/eos-prijs-2023" target="_blank" rel="noopener noreferrer" style="background-color: rgb(238, 48, 47); border:none;")
+            | Stem Eosprijs 2023
+
+        h1 Het pad naar duurzame kernfusie: jagen op plasma-uitbarstingen
+
+        .lead.mb-5
+          | In de race naar schone, onuitputtelijke energie staat kernfusie op het punt een
+          | doorbraak te maken. Maar voordat deze droom werkelijkheid kan worden, moeten we een
+          | cruciale uitdaging overwinnen: het beheersen van onvoorspelbare
+          | energie-uitbarstingen in
+          | kernfusiereactoren. Daarom gingen Casper Haems en Mateo Van Damme aan de slag in hun
+          | thesis om algoritmes te ontwikkelen die deze uitbarstingen kunnen detecteren voor
+          | Infusion, de onderzoekseenheid voor kernfusie aan de Universiteit Gent.
+
+        h5 Kernfusie als oplossing voor de energiecrisis
+        p
+          | De groeiende energiebehoefte door industrie, welvaart en bevolkingsgroei vormt een
+          | dringende uitdaging, waarbij de afhankelijkheid van fossiele brandstoffen
+          | klimaatverandering in de hand werkt. Dit probleem roept dan ook op tot betere en
+          | duurzamere energiebronnen.
+          br
+          | Belgische kerncentrales - verouderd en omgeven door politieke verdeeldheid - roepen
+          | vragen op over de toekomst van energieproductie. Kernfusie, in tegenstelling tot
+          | kernsplijting, oogt een veilig alternatief te worden met weinig afval en geen risico
+          | op
+          | een reactor meltdown. Dit maakt het een interessante oplossing voor de energie- en
+          | duurzaamheidsuitdagingen in België en de wereld. Het wordt dan ook vaak gezien als
+          | de
+          | heilige graal in de wereld van energieproductie.
+
+        .mb-3(style="text-align: center;")
+          div(style="position: relative; display: inline-block; max-width: 40em;")
+            img.img-fluid(src="/images/master-thesis-competition/christmas-eve-sun.png" alt="Picture of the sun")
+            a(href="https://flickr.com/photos/106648653@N05/31460091150" style="position: absolute; bottom: 0; right: 0; color: grey; font-size: 0.8em;")
+              | Paul Stewart CC BY 2.0 DEED
+          p.text-muted
+            | Een ingezoomde foto van de zon, genomen met een telescoop.
+
+        p
+          | Een voorbeeld om het wat concreter te maken: de zon is een kernfusiereactor. De
+          | gigantische bol plasma ondergaat constant kernfusie, een proces waarbij twee
+          | waterstofatomen worden samengesmolten tot één heliumatoom. Elke seconde wordt zo
+          | meer
+          | dan 600 miljoen ton helium gegenereerd. De energie die hierbij vrijkomt, in de vorm
+          | van
+          | licht, is essentieel voor het leven op aarde.
+
+        h5 Trouble in paradise?
+        p
+          | Een van de meest veelbelovende manieren om aan kernfusie te doen, is door gebruik te
+          | maken
+          | van
+          | een tokamak. Dit is een donutvormig apparaat dat plasma verwarmt tot het kernfusie
+          | ondergaat.
+          | Fusie in dit apparaat gaat echter gepaard met het optreden van Edge-Localized Modes
+          | (ELMs):
+          | plotselinge uitbarstingen van energie die de reactorwand kunnen beschadigen. Je kan
+          | ze een
+          | beetje vergelijken met een deksel op een kookpot dat trilt terwijl er stoom
+          | vrijkomt. Alleen
+          | is
+          | de stoom nu plasma van 150 miljoen graden Celsius dat dreigt de reactor te
+          | beschadigen.
+          br
+          br
+          | Er gebeurt dan ook veel onderzoek naar deze mysterieuze verschijnselen. De eerste
+          | stap is de
+          | ELMs vinden, en zelfs dit blijkt zeer moeilijk. ELMs manueel vinden en aanduiden is
+          | traag en
+          | automatische methoden zijn niet goed genoeg. In deze thesis ontwikkelden Mateo Van
+          | Damme en
+          | Casper Haems automatische methoden die alle soorten ELMs effectief kunnen vinden.
+          br
+          br
+          | Onderstaande foto toont de grootste tokamak-reactor ter wereld, genaamd JET. De
+          | meeste data
+          | in
+          | de thesis is afkomstig van dit apparaat. De reactorwanden van dit type reactor
+          | bestaan vaak
+          | uit
+          | exotische materialen, omdat ze bestand moeten zijn tegen extreem hoge temperaturen.
+          | Het
+          | repareren van schade aan deze reactorwanden is niet alleen kostelijk, maar ook het
+          | verwerven
+          | en
+          | verwerken van deze materialen is prijzig en veroorzaakt schadelijke emissies. Het is
+          | dus des
+          | te
+          | belangrijker om onderzoek te doen naar ELMs.
+
+        .mb-3(style="text-align: center;")
+          div(style="position: relative; display: inline-block; max-width: 100%;")
+            img.img-fluid(src="/images/master-thesis/JET_vessel_internal_view_mascot.jpg" alt="JET Tokamak")
+            a(href="https://www.euro-fusion.org/media-library/fusion-experiments/" style="position: absolute; bottom: 0; right: 0; color: grey; font-size: 0.8em;")
+              | EUROfusion/CC BY 4.0
+          p.text-muted
+            | De binnenkant van de JET tokamak reactor, gelegen in de UK.
+
+        h5 Hoe helpt deze thesis?
+        p
+          | Het hoofddoel van Haems en Van Damme was het ontwikkelen van algoritmen die in staat
+          | zijn om
+          | alle soorten ELMs te detecteren, ook de moeilijke gevallen. Ze pasten hiervoor
+          | technieken
+          | toe
+          | uit diverse disciplines, zoals computervisie, kunstmatige intelligentie en
+          | technieken voor
+          | het
+          | voorspellen van beurskoersen. Ook brachten ze de algoritmes onder in een goed
+          | ontworpen
+          | framework, waardoor nieuwe methoden snel kunnen worden ontwikkeld en bestaande
+          | methoden
+          | eenvoudig kunnen worden geëvalueerd.
+          br
+          br
+          | Een bijkomend probleem is dat bestaande algoritmes vaak niet open source zijn. Dit
+          | wil
+          | zeggen
+          | dat niet iedereen er toegang tot heeft of toestemming heeft om ze te gebruiken.
+          | Haems en Van
+          | Damme besloten echter om alle methoden ontwikkeld binnen deze thesis open source
+          | vrij te
+          | geven.
+          | Het is toegestaan voor iedereen om de methoden verder aan te passen, te verspreiden
+          | en te
+          | gebruiken in onderzoek naar fusie en andere domeinen.
+
+        h5 Verstoppertje met ELMs
+        p
+          | Tokamak-reactoren werken in pulsen. Bij elke puls wordt er een enorme hoeveelheid
+          | data
+          | opgenomen
+          | als time series signalen. Een time series signaal bestaat uit een reeks van metingen
+          | die elk
+          | een
+          | waarde en een tijdstip hebben. Een voorbeeld hiervan is een dagboek waar je elk jaar
+          | je
+          | lengte
+          | in opschrijft met een datum erbij.
+          br
+          | Haems en Van Damme gebruikten in hun thesis twee time series signalen. Enerzijds het
+          | "lichtsignaal", wat aangeeft hoeveel licht het plasma uitzendt op een bepaald
+          | moment.
+          | Anderzijds
+          | ook het "energiesignaal", dat een schatting aangeeft van hoeveel energie het plasma
+          | bevat op
+          | hetzelfde moment.
+
+        h6 Hoe herken je een ELM?
+        p
+          | Na veel onderzoek en debat tussen ELM-onderzoekers stelden zij een aantal kenmerken
+          | op
+          | waaraan
+          | je een ELM kan herkennen. Een eerste kenmerk is dat er een piek is in het
+          | lichtsignaal
+          | gedurende
+          | een honderdste van een seconde. Deze piek heeft een unieke vorm. Het begin van de
+          | piek gaat
+          | stijl omhoog terwijl het einde gradueel daalt. Met andere woorden, het plasma zal
+          | plots veel
+          | licht geven en geleidelijk aan zal de lichtsterkte weer zakken tot het normale
+          | niveau.
+          br
+          br
+          | Een tweede kenmerk is dat het energiesignaal daalt tijdens de ELM. Hoe groter de
+          | afname in
+          | energie, hoe schadelijker de ELM. Energie kan namelijk niet verdwijnen, de energie
+          | uit het
+          | plasma komt terecht in de reactorwand die hierdoor beschadigd wordt.
+
+        .mb-3(style="text-align: center;")
+          div(style="position: relative; display: inline-block; max-width: 40em;")
+            img.img-fluid(src="/images/master-thesis-competition/elm-characteristics.png" alt="Typical ELM")
+            p.text-muted
+              | Deze figuur toont hoe een ELM er uit zou kunnen zien in de data. Echte ELMs
+              | zijn
+              | helaas
+              | vaak minder gemakkelijk herkenbaar.
+
+        h5 De methoden
+        p
+          | De eerste methode die Haems en Van Damme ontwikkelden is genaamd 'LoG', en komt van
+          | uit de
+          | computervisie. Oorspronkelijk werd dit algoritme gebruikt om vlekken te vinden in
+          | een
+          | afbeelding, maar in wezen is een piek gewoon een speciaal soort vlek in één
+          | dimensie.
+          br
+          br
+          | Het tweede algoritme dat ze ontwikkelden heet 'LoGDoG' en bouwt verder op LoG, maar
+          | kijkt
+          | ook
+          | naar het energiesignaal. Hier worden alleen ELMs gedetecteerd wanneer de energie
+          | afneemt.
+          | Hiermee verminderden ze de hoeveelheid false positives, wat betekent dat het
+          | algoritme denkt
+          | dat
+          | er een ELM plaatsvindt, terwijl dat in de realiteit niet zo is.
+          br
+          br
+          | Verder is er de 'CustomKernel' methode, die berust op technieken uit digitale
+          | beeldverwerking.
+          | Het houdt rekening met de vorm van de piek om accurater ELMs te vinden.
+          | Ze ontwikkelden ook 'MACD' en 'RZS', die gebruik maken van technieken toegepast in
+          | beursanalyse
+          | en zijn gebaseerd op traditionele financiële wiskunde. Naast het voorspellen van de
+          | beursprijs
+          | blijkt dat het ook mogelijk is om deze technieken in te zetten in het voorspellen
+          | van ELM.
+          | Ze
+          | gaven dan ook verrassend goede resultaten.
+          br
+          br
+          | Tot slot ontwikkelden ze twee innovatieve methoden die de kracht van kunstmatige
+          | intelligentie
+          | benutten. De eerste AI-methode, genaamd 'RNN', maakt gebruik van een techniek die
+          | vaak
+          | gebruikt
+          | wordt voor stemherkenningssoftware. De andere methode, genaamd 'CNN', past
+          | technieken toe
+          | die
+          | oorspronkelijk ontwikkeld zijn voor objectherkenning uit foto's. Deze AI-methoden
+          | vertegenwoordigen een vernieuwende stap voorwaarts in ELM-detectie.
+          br
+          br
+          | Ze ontworpen dus algoritmes die aanzienlijk beter presteren dan de bestaande
+          | methodes en al
+          | actief in gebruik zijn voor onderzoek binnen Universiteit Gent. Er wordt ook nog
+          | verder
+          | onderzoek gedaan over dit onderwerp binnen de UGent.
+
+        h5 Op naar ITER
+        p
+          | De nieuwe grootste kernfusiereactor ter wereld, genaamd ITER, is momenteel in de
+          | constructiefase. Het is de bedoeling dat deze reactor met fusie meer energie
+          | produceert dan
+          | dat
+          | hij verbruikt, iets wat de huidige reactoren niet kunnen. Een van de uitdagingen die
+          | zal
+          | moeten
+          | worden opgelost is het aanpakken van ELMs.
+          br
+          | Haems en Van Damme bieden met hun thesis open source methoden aan om ELMs
+          | automatisch te
+          | vinden,
+          | wat onderzoek naar ELMs versnelt. Zo slaagden ze er in om een stap te zetten
+          | richting
+          | duurzame
+          | kernfusie.
+
+        .mb-3(style="text-align: center;")
+          div(style="position: relative; display: inline-block; max-width: 100%;")
+            img.img-fluid(src="/images/master-thesis-competition/iter-under-consruction.jpg" alt="One section of the ITER reactor")
+            a(href="https://www.iter.org/album/Construction" style="position: absolute; bottom: 0; right: 0; color: black; background-color: white; opacity: 0.5; font-size: 0.8em;")
+              | Credit © ITER Organization
+          p.text-muted
+            | Dit is een sectie van de toekomstige ITER tokamak die momenteel onder
+            | constructie is.
+
+        h5 Over Casper Haems & Mateo Van Damme
+        p
+          | Wij zijn beiden Masters in de industriële wetenschappen met een specialisatie in
+          | informatica.
+          | Onze gezamenlijke interesse in het bijdragen aan kernfusiereactoren heeft geleid tot
+          | een
+          | bijzondere samenwerking.
+          br
+          | Casper heeft zijn expertise op het gebied van marktanalyse ingezet, terwijl Mateo
+          | zijn
+          | achtergrond in computervisie heeft benut.
+          br
+          | Momenteel is Casper bezig met een doctoraatsonderzoek met als titel 'Schaalbaar
+          | platform
+          | voor
+          | Immersieve en Interactieve holografische communicatie'. Dit omvat toepassingen zoals
+          | online
+          | virtuele vergaderingen en zelfs medische operaties waarbij een dokter in Amerika een
+          | ingreep
+          | uitvoert in Europa met behulp van virtual reality.
+          br
+          | Ondertussen begint Mateo een carrière in de industrie als computer vision engineer,
+          | waar hij
+          | zijn expertise op het gebied van computervisie verder kan ontwikkelen en benutten.
+
+    .col-lg-2.d-flex

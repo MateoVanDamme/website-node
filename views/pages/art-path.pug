@@ -1,0 +1,201 @@
+extends ../layout
+
+block content
+  .d-flex.flex-column.mb-4
+    p.lead.text-center
+      | This project focused on developing a localization estimation application for the Museum of Fine Arts
+      | (MSK)
+      | in Ghent, with the potential to improve the visitor experience. The goal is to process video footage
+      | captured within the MSK and determine the cameraman's location in real-time, correlating it with
+      | specific exhibition halls. The application also generates an estimate of the most likely path taken by
+      | the visitor.
+
+    .d-flex.gap-2.mb-3.justify-content-center.align-items-stretch
+      .lead Team members:
+
+      a.btn.btn-primary(href="https://www.linkedin.com/in/ahmad-alkaddor/" target="_blank" rel="noopener noreferrer" style="background-color: rgb(0, 130, 202); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="16" fill="currentColor" viewBox="0 0 16 16")
+          path(d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z")
+        |  Ahmad Alkaddor
+
+      a.btn.btn-primary(href="https://www.linkedin.com/in/ellen-mullie/" target="_blank" rel="noopener noreferrer" style="background-color: rgb(0, 130, 202); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="16" fill="currentColor" viewBox="0 0 16 16")
+          path(d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z")
+        |  Ellen Mullie
+
+      a.btn.btn-primary(href="https://www.linkedin.com/in/jonas-neirynck/" target="_blank" rel="noopener noreferrer" style="background-color: rgb(0, 130, 202); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="16" fill="currentColor" viewBox="0 0 16 16")
+          path(d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z")
+        |  Jonas Neirynck
+
+    .d-flex.gap-2.mb-3.justify-content-center.align-items-stretch
+      .lead Other links:
+
+      a.btn.btn-primary(href="https://storage.googleapis.com/mateo-website-bucket/(Sm)Art%20path%20report.pdf" target="_blank" rel="noopener noreferrer" style="background-color: rgb(238, 48, 47); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16")
+          path(fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z")
+        |  Report (EN)
+
+      a.btn.btn-primary(href="https://github.ugent.be/ComputerVision2022/SmArtPath" target="_blank" rel="noopener noreferrer" style="background-color: rgb(51, 51, 51); border:none;")
+        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16")
+          path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+        |  Repository (UGent only)
+
+  .d-flex.flex-column
+    .card.mb-4.text-center
+      .card-body
+        h5.card-title Demonstration video
+        p.card-text
+          | This video features a demonstration of the (Sm)Art Path project, showcasing the indoor
+          | localization
+          | estimation algorithm applied to Route 3. The input video is processed in real-time, accurately
+          | determining the cameraman's current most likely exhibit hall and estimating the path taken by
+          | the
+          | visitor.
+
+      .ratio.ratio-16x9
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/egIZzmanUAQ?si=62mHWKeJGFhaXhsX" title="YouTube video player" allowfullscreen)
+
+    .py-4.row.mb-4
+      .col-lg-6
+        .card.mb-4
+          .card-body
+            h5.card-title Project description
+            p.card-text
+              | In order to provide added value for visitors of the
+              | Museum of Fine Arts (MSK) in Ghent, a localization estimation
+              | algorithm could be useful. This could make it possible to provide
+              | additional information about paintings that are currently in
+              | front of the visitor. Visual positioning is a potential approach to
+              | tackle this problem. It doesn't need any external infrastructure
+              | or transmitters to make a location estimation, unlike other
+              | alternatives, and is therefore a good candidate.
+              br
+              br
+              | This technique involves comparing live camera images to a database of
+              | annotated images to pinpoint the user's location. The MSK's abundance of
+              | distinctive landmarks, its artworks, made it an ideal setting for this endeavor.
+              | Access was provided to the museum's floor plan and a collection of images of the
+              | paintings.
+              br
+              br
+              | Using frames of a video stream, the location of the user will be
+              | estimated. First, paintings will have to be detected on an image.
+              | Then, these paintings have to be compared and matched with
+              | the ones available in a database. In a final step, the information
+              | about these matches is used to estimate the current location of the
+              | user.
+
+      .col-lg-6
+        .card.mb-4
+          .card-body
+            h5.card-title Skills learned
+
+            ul
+              li
+                | During this project, I gained experience in system design by actively participating
+                | in
+                | the creation of novel algorithms and the supporting architecture.
+              li
+                | I developed proficiency in OpenCV, a powerful framework for computer vision, which
+                | was a
+                | crucial tool for our image processing tasks.
+              li
+                | I acquired a strong foundation in image processing fundamentals, including
+                | techniques
+                | like canny edge detection, erosions, and dilations.
+              li
+                | My grasp of computer vision fundamentals expanded, encompassing skills in object
+                | detection, keypoint detection, keypoint matching, and the application of SIFT
+                | (Scale-Invariant Feature Transform).
+              li
+                | Python was the primary programming language used in this project, allowing me to
+                | enhance
+                | my Python programming skills.
+              li
+                | Working collaboratively with my team, I improved my ability to communicate,
+                | collaborate,
+                | and contribute effectively in a group setting.
+
+    h4 Algorithms discussion
+
+    .py-4.row.mb-4
+      .col-lg-6
+        .card.mb-4
+          img.card-img-top(src="/images/art-path/pipeline.png" alt="Card image cap")
+          .card-body
+            h5.card-title.text-center Painting detection algorithm
+            p.lead.text-center
+              | Image processing steps to extract a painting
+            p.card-text
+              | Detection is used to retrieve paintings from images. The process has the following six
+              | steps:
+            ol
+              li
+                strong Lens correction:
+                |  First, the incoming frame is corrected for the
+                | lens's intrinsic parameters. This correction eliminates effects such as fisheye
+                | distortion and other optical aberrations.
+              li
+                strong Canny edge detection:
+                |  A Canny edge detector is applied to
+                | identify sharp edges in the images.
+              li
+                strong Dilation:
+                |  Some detected edges may not form consistent straight
+                | lines,
+                | leading to irregular contours. Dilation is employed to bridge gaps between line
+                | segments, creating smoother, more continuous shapes.
+              li
+                strong Finding contours:
+                |  Dilated edges are used to locate contours,
+                | connecting
+                | points with similar intensity or color. This step relies on Suzuki's method.
+              li
+                strong Filtering contours:
+                |  Multiple contours may be identified in each
+                | image.
+                | To isolate paintings, the results are sorted by area, prioritizing larger regions.
+                | Additionally, only contours with four points, resembling rectangular shapes, are
+                | considered. Contours proceed to the next stage only if they exhibit convexity.
+              li
+                strong Homography:
+                |  Following contour filtering, a homography
+                | transformation
+                | rectifies the selected contour, producing a standardized painting representation
+                | suitable for matching.
+            p.card-text
+              | The result of the Canny Edge Detection, contour selection and homography can be seen in
+              | the image above.
+
+      .col-lg-6
+        .card.mb-4
+          img.card-img-top(src="/images/art-path/path.jpg" alt="Card image cap")
+          .card-body
+            h5.card-title.text-center Localization algorithm
+            p.lead.text-center
+              | Custom 'budget based' algorithm
+            p.card-text
+              | While hidden Markov chains are a standard choice for solving this localization
+              | challenge,
+              | we pursued a distinct 'budget'-based localization algorithm. This decision was motivated
+              | by
+              | our interest in exploring a novel approach. To facilitate feature matching, keypoints
+              | and
+              | descriptors for all database images are computed using SIFT. This computation occurs
+              | once
+              | during an initial application run since the database images remain static.
+              br
+              br
+              | When a new painting is detected, keypoints and descriptors are calculated for it, so the
+              | database can be searched for matches using a BF matcher and a distance metric.
+              br
+              br
+              | To optimize matching performance, the application first attempts to match against the
+              | best
+              | match for the previous frame. If similarities are insufficient, the search expands to
+              | consider all paintings in the same room, and if that also fails, the entire database.
+              br
+              br
+              | The image above showcases an example for an estimated path calculated using the localization
+              | algorithm.
