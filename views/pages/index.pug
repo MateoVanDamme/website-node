@@ -53,7 +53,9 @@ block content
     .col-lg-4
       //- Art
       .card.clickable.text-center.mb-4(onclick="window.location.href='/art'")
-        img.card-img-top(src="/images/3D-printer.png" alt="Generative Art" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem;")
+        video.card-img-top(autoplay loop muted playsinline style="object-fit: cover; max-height: 300px;")
+          source(src="https://storage.googleapis.com/mateo-website-bucket/art-videos/flow-audio.mkv")
+          | Your browser does not support the video tag.
         .card-body
           h5.card-title Art
           p.lead BYOB Generative Art
