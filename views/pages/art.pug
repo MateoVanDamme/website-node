@@ -9,11 +9,14 @@ block content
     .d-flex.gap-2.mb-3.justify-content-center
       a.btn(href="https://nerdlab.be/byob" target="_blank" rel="noopener noreferrer" style="background-color: white; color: #333; border: 1px solid #ddd;")
         img(src="/images/logos/nerdlab-glasses.svg" alt="Nerdlab" style="height: 20px; margin-right: 8px; vertical-align: middle;")
-        |  BYOB Event
+        |  BYOB 2025
 
   .row.mb-4
     .col-lg-6.mb-4.mb-lg-0
       .card.h-100
+        video.card-img-top(autoplay loop muted playsinline style="object-fit: cover; max-height: 300px;")
+          source(src="https://storage.googleapis.com/mateo-website-bucket/art-videos/flow-audio.mkv")
+          | Your browser does not support the video tag.
         .card-body
           h5.card-title Flow Viz
           .d-flex.gap-2.mb-3
@@ -40,6 +43,9 @@ block content
 
     .col-lg-6.mb-4.mb-lg-0
       .card.h-100
+        video.card-img-top(autoplay loop muted playsinline style="object-fit: cover; max-height: 300px;")
+          source(src="https://storage.googleapis.com/mateo-website-bucket/art-videos/flow-field.mkv")
+          | Your browser does not support the video tag.
         .card-body
           h5.card-title Flow Field
           .d-flex.gap-2.mb-3
