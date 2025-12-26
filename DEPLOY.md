@@ -10,7 +10,7 @@
 ```bash
 # Create a small VM (e2-micro is free tier eligible)
 gcloud compute instances create mateo-website \
-  --zone=europe-west1-b \
+  --zone=us-east1-c \
   --machine-type=e2-micro \
   --image-family=ubuntu-2204-lts \
   --image-project=ubuntu-os-cloud \
@@ -24,7 +24,7 @@ gcloud compute firewall-rules create allow-http \
 
 # Get your public IP
 gcloud compute instances describe mateo-website \
-  --zone=europe-west1-b \
+  --zone=us-east1-c \
   --format='get(networkInterfaces[0].accessConfigs[0].natIP)'
 ```
 
@@ -32,7 +32,7 @@ gcloud compute instances describe mateo-website \
 
 ```bash
 # SSH into the VM
-gcloud compute ssh mateo-website --zone=europe-west1-b
+gcloud compute ssh mateo-website --zone=us-east1-c
 
 # Install Docker
 sudo apt update
@@ -76,7 +76,7 @@ In Cloudflare DNS:
 
 ```bash
 # SSH back into VM
-gcloud compute ssh mateo-website --zone=europe-west1-b
+gcloud compute ssh mateo-website --zone=us-east1-c
 
 # Pull latest code
 cd website-node
