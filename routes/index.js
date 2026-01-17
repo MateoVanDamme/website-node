@@ -33,6 +33,14 @@ router.get('/art', (req, res) => {
   });
 });
 
+// Projects
+router.get('/projects', (req, res) => {
+  res.render('pages/projects', {
+    title: 'Projects',
+    activePage: 'Projects'
+  });
+});
+
 // API endpoint to fetch Printables user stats
 router.get('/api/printables-stats', async (req, res) => {
   try {
