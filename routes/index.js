@@ -33,6 +33,14 @@ router.get('/art', (req, res) => {
   });
 });
 
+// Hackerspace Gent Website
+router.get('/hackerspace', (req, res) => {
+  res.render('pages/hackerspace', {
+    title: 'Hackerspace Gent Website',
+    activePage: ''
+  });
+});
+
 // API endpoint to fetch Printables user stats
 router.get('/api/printables-stats', async (req, res) => {
   try {
