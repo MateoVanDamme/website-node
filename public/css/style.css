@@ -1,23 +1,95 @@
-/* body {
-    background-color: rgba(30, 30, 30, 1.00);
-} */
-
-/* Tags at the bottom of cards should get their own font */
+/* Tags at the bottom of cards */
 .tags {
     color: #9999AA;
     font-style: italic;
 }
 
+/* Card styling */
 .card {
-    outline: 1px solid transparent; /* Transparent outline initially */
+    outline: 1px solid transparent;
 }
 
-/* Cards are clickable */
 .card.clickable {
     cursor: pointer;
-    transition: outline-color 0.3s; /* Smooth transition for the outline color */
+    transition: outline-color 0.3s;
 }
 
 .card.clickable:hover {
-    outline-color: white; /* White outline on hover */
+    outline-color: white;
+}
+
+/* Profile picture */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Social buttons */
+.btn-linkedin {
+    background-color: #0082ca;
+    border: none;
+}
+
+.btn-github {
+    background-color: #333;
+    border: none;
+}
+
+.btn-instagram {
+    background-color: #ac2bac;
+    border: none;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    border: none;
+}
+
+/* Video in cards */
+.card-video {
+    object-fit: cover;
+    max-height: 300px;
+}
+
+/* Masonry layout */
+.masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+.masonry-grid .card {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+    .navbar.sticky-top {
+        position: relative;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}
+
+/* Feature list */
+.feature-list {
+    margin-top: 1rem;
+}
+
+.feature-item {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.feature-label {
+    color: #2196F3;
+    font-weight: 600;
 }

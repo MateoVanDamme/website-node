@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-// Home page
+// Projects page (home)
 router.get('/', (req, res) => {
   res.render('pages/index', {
-    title: 'Home',
-    activePage: 'Home'
+    title: 'Projects',
+    activePage: 'Projects'
   });
 });
 
@@ -30,14 +30,6 @@ router.get('/art', (req, res) => {
   res.render('pages/art', {
     title: 'Art',
     activePage: 'Art'
-  });
-});
-
-// Projects
-router.get('/projects', (req, res) => {
-  res.render('pages/projects', {
-    title: 'Projects',
-    activePage: 'Projects'
   });
 });
 
