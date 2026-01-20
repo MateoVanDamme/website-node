@@ -16,6 +16,29 @@ block content
     .masonry-grid {
       column-count: 2;
     }
+    /* Small screens */
+     @media (max-width: 768px) {
+      .masonry-grid {
+        column-count: 1;
+      }
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+    .tech-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin-top: auto;
+      padding-right : 1rem;
+    }
+    .tech-icons img {
+      height: 6rem;
+      width: auto;
+      padding-left: 2rem;
+      opacity: 0.9;
+    }
 
   .masonry-grid
     .card
@@ -45,6 +68,9 @@ block content
         h6 Google Calendar sync
         p.card-text
           | When event markdown files change, the action parses them, and updates the Google Calendar events using the #[code googleapis] Node.js library.
+        .tech-icons
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" title="GitHub Actions")
+          //- img(src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Google Calendar API" title="Google Calendar API")
 
     .card
       .card-body
@@ -61,6 +87,9 @@ block content
           .feature-item
             span.feature-label Markdown
             span  parsing for events
+        .tech-icons
+          img(src="images/logos/jsIconGreen.svg" alt="Node.js" title="Node.js")
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" title="Express")
 
     .card
       .card-body
@@ -77,3 +106,6 @@ block content
           .feature-item
             span.feature-label SSL
             span  via Azure
+        .tech-icons
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker")
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" title="Azure")
