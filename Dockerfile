@@ -1,18 +1,13 @@
-FROM node:20-alpine
-
+FROM node:20-alpine AS base
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
-
-# Install dependencies
-RUN npm install --production
-
-# Copy application files
-COPY . .
-
-# Expose port
 EXPOSE 3000
 
-# Start the application
+FROM base AS development
+RUN npm install
+CMD ["npm", "run", "dev"]
+
+FROM base AS production
+RUN npm install --production
+COPY . .
 CMD ["npm", "start"]
