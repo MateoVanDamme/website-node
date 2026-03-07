@@ -4,6 +4,19 @@ block variables
   - pageDescription = "The Hackerspace Gent website — a Node.js and Express app with a markdown-powered event system, deployed on Azure."
   - pageOgImage = "https://storage.googleapis.com/mateo-website-bucket/hackerspace-gent-website.png"
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Hackerspace Gent Website",
+      "description": "Node.js and Express website for Hackerspace Gent with a markdown-powered event system, deployed on Azure.",
+      "url": "https://hackerspace.gent/",
+      "codeRepository": "https://github.com/0x20/website-node",
+      "programmingLanguage": ["JavaScript", "Node.js"],
+      "author": { "@type": "Person", "name": "Mateo Van Damme" }
+    }
+
 block content
   .d-flex.flex-column.mb-5
     p.lead.text-center

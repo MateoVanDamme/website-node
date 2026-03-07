@@ -3,6 +3,17 @@ extends ../layout
 block variables
   - pageDescription = "Bachelor project for Jan De Nul Group — a drone system using GPS and live camera feed to triangulate buoy GPS coordinates."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Jan De Nul Drone Buoy Triangulation System",
+      "description": "Bachelor project for Jan De Nul Group — a drone system using GPS and live camera feed to triangulate buoy coordinates.",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" },
+      "sourceOrganization": { "@type": "CollegeOrUniversity", "name": "Ghent University" }
+    }
+
 block content
   .d-flex.flex-column.mb-4
     p.lead.text-center To complete my bacherlor degree at UGent my team created a software solution for Jan De Nul Group from scratch. A drone flies above buoys with a sensor suite including GPS and a live camera feed. This information is later used to triangulate the GPS coordinates. The code and system architecture are unfortunately proprietary.

@@ -3,6 +3,22 @@ extends ../layout
 block variables
   - pageDescription = "BYOB generative art installations by Mateo Van Damme — interactive WebGL particle visualizations that react to audio and webcam input."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "BYOB Generative Art Installations",
+      "description": "Interactive WebGL particle visualizations that react to audio and webcam input, shown at BYOB (Bring Your Own Beamer) events.",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" },
+      "hasPart": [
+        { "@type": "CreativeWork", "name": "Flyover Ghent", "url": "https://flyover.mateovandamme.com/", "codeRepository": "https://github.com/MateoVanDamme/fly-over-gent" },
+        { "@type": "CreativeWork", "name": "Flow Viz", "url": "https://mateovandamme.github.io/flow-viz/", "codeRepository": "https://github.com/MateoVanDamme/flow-viz" },
+        { "@type": "CreativeWork", "name": "Flow Field", "url": "https://mateovandamme.github.io/flow-field/", "codeRepository": "https://github.com/MateoVanDamme/flow-field" },
+        { "@type": "CreativeWork", "name": "Newline 2026 BYOB", "codeRepository": "https://github.com/0x20/newline2026-byob" }
+      ]
+    }
+
 block content
   .d-flex.flex-column.mb-5
     p.lead.text-center

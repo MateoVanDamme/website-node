@@ -3,6 +3,17 @@ extends ../layout
 block variables
   - pageDescription = "DIY barn door tracker for astrophotography — microcontroller code and presentation slides from talks at Starnights and VVS Scheldeland."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "DIY Barn Door Tracker for Astrophotography",
+      "description": "DIY motorised barn door tracker for long-exposure astrophotography, with open-source microcontroller code.",
+      "codeRepository": "https://github.com/MateoVanDamme/barn-door-tracker",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" }
+    }
+
 block content
   .d-flex.flex-column.mb-5
     p.lead.text-center

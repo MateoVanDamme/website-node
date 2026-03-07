@@ -3,6 +3,18 @@ extends ../layout
 block variables
   - pageDescription = "A turn-based strategy game built for a UGent DevOps course, where teams competed against each other for extra marks."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Virtual Army — DevOps Strategy Game",
+      "description": "Turn-based online strategy game built for a UGent DevOps course, where competing teams earned extra exam marks.",
+      "codeRepository": "https://github.com/MateoVanDamme/java-2022-virtual-army",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" },
+      "sourceOrganization": { "@type": "CollegeOrUniversity", "name": "Ghent University" }
+    }
+
 block content
   .d-flex.flex-column.mb-4
     p.lead.text-center

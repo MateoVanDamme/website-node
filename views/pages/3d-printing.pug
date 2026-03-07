@@ -3,6 +3,16 @@ extends ../layout
 block variables
   - pageDescription = "3D printing projects by Mateo Van Damme — functional designs including telescope accessories, holders, and Raspberry Pi cases. All models available on Printables.com."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "3D Printing Projects",
+      "description": "Functional 3D designs including telescope accessories, holders, and Raspberry Pi cases, available on Printables.com.",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" }
+    }
+
 block content
   .d-flex.flex-column.mb-5
     p.lead.text-center

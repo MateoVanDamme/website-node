@@ -3,6 +3,19 @@ extends ../layout
 block variables
   - pageDescription = "A Three.js computer graphics project generating lifelike natural scenes using fractals, particle systems, and procedural lighting."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Three.js Natural Scene Generation",
+      "description": "Computer graphics project generating lifelike natural scenes using fractals, particle systems, and procedural lighting in Three.js.",
+      "codeRepository": "https://github.com/MCabaM/3D-rendering",
+      "programmingLanguage": "JavaScript",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" },
+      "sourceOrganization": { "@type": "CollegeOrUniversity", "name": "Ghent University" }
+    }
+
 block content
   .d-flex.flex-column
     p.lead.text-center

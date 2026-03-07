@@ -3,6 +3,18 @@ extends ../layout
 block variables
   - pageDescription = "A distributed Java museum backend built with Quarkus — tour booking, security shifts, and exhibition management, for a UGent system design course."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Quarkus Museum Backend",
+      "description": "Distributed Java microservices application simulating a museum backend with tour booking, security scheduling, and exhibition management.",
+      "programmingLanguage": "Java",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" },
+      "sourceOrganization": { "@type": "CollegeOrUniversity", "name": "Ghent University" }
+    }
+
 block content
   .d-flex.flex-column.mb-4
     p.lead.text-center

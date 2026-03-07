@@ -4,6 +4,19 @@ block variables
   - pageDescription = "Internal financial dashboard for the 0x20 hackerspace board. Tracks bar tabs, membership dues, and the treasury. Built with FastAPI and React, LAN-only with GitHub OAuth."
   - pageOgImage = "https://storage.googleapis.com/mateo-website-bucket/dashboard-treasury.png"
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "0x20 Board Financial Dashboard",
+      "description": "Internal financial dashboard for the Hackerspace Gent board. Tracks bar tabs, membership dues, and the treasury.",
+      "applicationCategory": "BusinessApplication",
+      "codeRepository": "https://github.com/0x20/dashboard",
+      "programmingLanguage": ["Python", "TypeScript"],
+      "author": { "@type": "Person", "name": "Mateo Van Damme" }
+    }
+
 block content
   .d-flex.flex-column.mb-5
     p.lead.text-center

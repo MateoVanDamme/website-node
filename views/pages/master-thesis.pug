@@ -3,6 +3,18 @@ extends ../layout
 block variables
   - pageDescription = "Master thesis at UGent applying machine learning to fusion reactor data to detect harmful anomalies, developed with the Infusion research unit."
 
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Thesis",
+      "name": "Machine Learning for Anomaly Detection in Fusion Reactor Data",
+      "description": "Master thesis applying machine learning to fusion device data to detect harmful anomalies that damage the reactor wall.",
+      "inSupportOf": "Master of Science in Computer Science Engineering",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" },
+      "sourceOrganization": { "@type": "CollegeOrUniversity", "name": "Ghent University" }
+    }
+
 block content
   .d-flex.flex-column.mb-5
     p.lead.text-center
