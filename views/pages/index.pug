@@ -1,5 +1,22 @@
 extends ../layout
 
+- var pageDescription = "Software developer from Ghent. Portfolio of projects including astrophotography, generative art, 3D printing, and software engineering."
+- var pageOgImage = "/images/profile-pictures/side.jpg"
+
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mateo Van Damme",
+      "jobTitle": "Software Developer",
+      "sameAs": [
+        "https://github.com/MateoVanDamme",
+        "https://www.linkedin.com/in/mateo-van-damme-61b135194/",
+        "https://www.instagram.com/mateovandamme"
+      ]
+    }
+
 block content
   .row.py-lg-4.text-white.text-center
     .col-lg-3
@@ -53,7 +70,7 @@ block content
 
     //- Board Dashboard
     .card.clickable(onclick="window.location.href='/board-dashboard'")
-      img.card-img-top(src="/images/dashboard/bar-tab.png" alt="Board Dashboard" style="object-fit: cover; max-height: 300px; border-bottom: 1px solid #333;")
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/dashboard-bar-censored.png" alt="0x20 board financial dashboard" style="object-fit: cover; max-height: 300px; border-bottom: 1px solid #333;")
       .card-body
         h5.card-title.mb-4 0x20 Board Dashboard
         .d-flex.gap-2.mb-3
