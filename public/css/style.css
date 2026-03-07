@@ -93,3 +93,20 @@
     color: #2196F3;
     font-weight: 600;
 }
+
+/* Tech icons */
+.tech-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+.tech-icons img {
+    height: 5rem;
+    width: auto;
+    opacity: 0.9;
+}

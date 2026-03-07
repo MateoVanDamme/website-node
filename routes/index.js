@@ -41,6 +41,14 @@ router.get('/hackerspace', (req, res) => {
   });
 });
 
+// Board Dashboard
+router.get('/board-dashboard', (req, res) => {
+  res.render('pages/board-dashboard', {
+    title: 'Board Dashboard',
+    activePage: 'Board Dashboard'
+  });
+});
+
 // API endpoint to fetch Printables user stats
 router.get('/api/printables-stats', async (req, res) => {
   try {

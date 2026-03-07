@@ -1,0 +1,183 @@
+extends ../layout
+
+block content
+  .d-flex.flex-column.mb-5
+    p.lead.text-center
+      | Internal financial dashboard for Hackerspace Gent (0x20) board members.
+      | Tracks bar tab balances, membership payments, and the treasury.
+
+    .d-flex.gap-2.mb-3.justify-content-center
+      a.btn.btn-github(href="https://github.com/0x20/dashboard" target="_blank" rel="noopener noreferrer")
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+          path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+        | GitHub
+
+  style.
+    .masonry-grid {
+      column-count: 2;
+    }
+    @media (max-width: 768px) {
+      .masonry-grid {
+        column-count: 1;
+      }
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+  .masonry-grid
+
+    //- Security model
+    .card
+      .card-body
+        h5.card-title Security
+        p.card-text
+          | Financial data is sensitive. The dashboard never reaches the open internet, it is only
+          | accessible on the hackerspace LAN (#[code board-financials.lan.0x20.be]).
+        p.card-text
+          | Data comes from two sister repos: bank exports (#[strong bank-reporting], private) and the bar ledger (#[strong tab-data], public).
+          | Sensitive data is never committed, it lives on the server directly.
+        p.card-text
+          | All sensitive pages are behind GitHub OAuth. Board members authenticate with their GitHub account
+          | via OAuth2. The backend issues a signed JWT after the OAuth callback, which is verified on every API request.
+        .feature-list
+          .feature-item
+            span.feature-label LAN-only
+            span  not reachable from the internet
+          .feature-item
+            span.feature-label GitHub OAuth
+            span  board allowlist only
+          .feature-item
+            span.feature-label JWT
+            span  signed tokens, verified on every request
+          .feature-item
+            span.feature-label Docker
+            span  isolated containers, no raw port exposure
+
+    //- Tech stack
+    .card
+      .card-body
+        h5.card-title Architecture
+        .row.mt-2
+          .col-6
+            h6.text-muted.mb-2 Backend
+            .feature-list
+              .feature-item
+                span.feature-label FastAPI
+                span  Python
+              .feature-item
+                span.feature-label pandas
+                span  data parsing
+          .col-6
+            h6.text-muted.mb-2 Frontend
+            .feature-list
+              .feature-item
+                span.feature-label React
+                span  + TypeScript
+              .feature-item
+                span.feature-label Vite
+                span  build tooling
+              .feature-item
+                span.feature-label Recharts
+                span  visualisation
+        hr.my-3
+        h6.text-muted.mb-2 Infrastructure
+        .feature-list
+          .feature-item
+            span.feature-label Docker Compose
+            span  frontend + backend containers
+          .feature-item
+            span.feature-label Nginx
+            span  reverse proxy and SPA routing
+          .feature-item
+            span.feature-label Cron
+            span  data synced every 10 minutes
+        .tech-icons
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python")
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React")
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" title="Vite")
+          img(src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker")
+
+    //- Bar tab screenshot
+    .card
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/dashboard-bar-censored.png" alt="Bar tab debtors view" style="border-bottom: 1px solid #333;")
+      .card-body
+        h5.card-title Bar Tab
+        p.card-text
+          | Members run a tab at the bar using a custom beancount ledger. The dashboard reads
+          | #[code bartab.beancount] from #[a(href="https://github.com/0x20/tab-data" target="_blank" rel="noopener noreferrer") tab-data] and shows who owes what and general spending habits.
+        .feature-list
+          .feature-item
+            span.feature-label Beancount
+            span  open-source plain-text double-entry ledger
+
+
+    //- Members
+    .card
+      img.card-img-top(src='https://storage.googleapis.com/mateo-website-bucket/dashboard-members-censored.png' alt='Member payment heatmap' style='border-bottom: 1px solid #333;')
+      .card-body
+        h5.card-title Members
+        p.card-text
+          | Payment heatmap showing which members are up to date with their membership dues.
+          | Each row is a member, each column a month. Green means paid, red means overdue.
+        p.card-text
+          | Names are visible only to board members on the internal LAN. This screenshot is censored.
+        .feature-list
+          .feature-item
+            span.feature-label Heatmap
+            span  per member, per month
+          .feature-item
+            span.feature-label Private
+            span  board-only view
+
+
+    //- Treasury
+    .card
+      #treasuryCarousel.carousel.slide(data-bs-ride="carousel")
+        .carousel-inner
+          .carousel-item.active
+            img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/dashboard-treasury.png" alt="Treasury overview" style="border-bottom: 1px solid #333;")
+          .carousel-item
+            img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/dashboard-pie-taller.png" alt="Expense breakdown pie chart" style="border-bottom: 1px solid #333;")
+        button.carousel-control-prev(type="button" data-bs-target="#treasuryCarousel" data-bs-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.visually-hidden Previous
+        button.carousel-control-next(type="button" data-bs-target="#treasuryCarousel" data-bs-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.visually-hidden Next
+      .card-body
+        h5.card-title Treasure Chest
+        p.card-text
+          | Bank balance over time as a line chart, income vs. expenses by category, and a yearly
+          | expense breakdown as a pie chart with a year selector. Categories include membership,
+          | bar, rent, utilities, and more. pandas parses and categorises transactions using keyword matching.
+        .feature-list
+          .feature-item
+            span.feature-label pandas
+            span  transaction parsing and aggregation
+          .feature-item
+            span.feature-label Recharts
+            span  line chart, bar chart, pie chart
+          .feature-item
+            span.feature-label Year selector
+            span  compare across years
+
+    //- TV display
+    .card
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/dashboard-tv.png" alt="Space TV display" style="border-bottom: 1px solid #333;")
+      .card-body
+        h5.card-title Space TV Display
+        p.card-text
+          | One unauthenticated endpoint (#[code /tv]) shows the space stats on the TV in the hackerspace.
+          | No login required, it only exposes two aggregate numbers, nothing sensitive.
+        p.card-text
+          | Active members is derived from the payment heatmap for the last completed month.
+          | Snacks bought is the beancount ledger summed for the current month.
+        .feature-list
+          .feature-item
+            span.feature-label Public
+            span  no auth, no personal data
+          .feature-item
+            span.feature-label FastAPI
+            span  dedicated #[code /public/stats] endpoint
