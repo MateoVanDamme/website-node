@@ -6,17 +6,47 @@ block variables
 
 block extra_head
   script(type="application/ld+json").
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mateo Van Damme",
-      "jobTitle": "Software Developer",
-      "sameAs": [
-        "https://github.com/MateoVanDamme",
-        "https://www.linkedin.com/in/mateo-van-damme-61b135194/",
-        "https://www.instagram.com/mateovandamme"
-      ]
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mateo Van Damme",
+        "url": "https://mateovandamme.com/",
+        "image": "https://mateovandamme.com/images/profile-pictures/side.jpg",
+        "jobTitle": "Software Developer",
+        "description": "Software developer from Ghent, Belgium. I build web apps, generative art installations, DIY electronics, and do astrophotography.",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Ghent University",
+          "url": "https://www.ugent.be/"
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Master of Information Engineering Technology, magna cum laude"
+        },
+        "knowsAbout": [
+          "Node.js", "Express", "JavaScript",
+          "Python", "FastAPI",
+          "WebGL", "Three.js", "Generative Art",
+          "DevOps", "Docker", "GitHub Actions", "Azure",
+          "Astrophotography", "DIY Electronics", "Microcontrollers",
+          "3D Printing", "CAD Modeling",
+          "Machine Learning", "Fusion Energy Research"
+        ],
+        "sameAs": [
+          "https://github.com/MateoVanDamme",
+          "https://www.linkedin.com/in/mateo-van-damme-61b135194/",
+          "https://www.instagram.com/mateovandamme"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mateo Van Damme",
+        "url": "https://mateovandamme.com/",
+        "author": { "@type": "Person", "name": "Mateo Van Damme" }
+      }
+    ]
 
 block content
   .row.py-lg-4.text-white.text-center
