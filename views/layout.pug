@@ -1,5 +1,6 @@
 - var pageDescription = "Mateo Van Damme — software developer from Ghent."
 - var pageOgImage = null
+- var pageTitle = null
 block variables
 
 doctype html
@@ -7,9 +8,9 @@ html(lang="en" data-bs-theme="dark")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Mateo Van Damme
+    title= pageTitle ? pageTitle + " | Mateo Van Damme" : "Mateo Van Damme"
     meta(name="description" content=pageDescription)
-    meta(property="og:title" content="Mateo Van Damme")
+    meta(property="og:title" content=pageTitle ? pageTitle + " | Mateo Van Damme" : "Mateo Van Damme")
     meta(property="og:description" content=pageDescription)
     meta(property="og:type" content="website")
     if pageOgImage
