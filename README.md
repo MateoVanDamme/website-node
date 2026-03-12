@@ -106,3 +106,17 @@ docker stop website-container
 docker rm website-container
 docker run -d -p 80:3000 --restart=always --name website-container website
 ```
+
+---
+
+## SEO
+
+**Canonical URLs** are set automatically via Express middleware (`app.js`) — every page gets `<link rel="canonical" href="https://mateovandamme.com/...">` without any per-page configuration.
+
+**Sitemap** is at `public/sitemap.xml` and referenced in `public/robots.txt`.
+
+**JSON-LD structured data** is added per page in each view (`views/pages/*.pug`) using schema.org types (e.g. `Person`, `WebSite`, `CreativeWork`).
+
+**Cloudflare settings** to prevent duplicate page indexing:
+- **SSL/TLS → Edge Certificates → Always Use HTTPS**: on — redirects `http://` → `https://`
+- **Redirect rule**: `www.mateovandamme.com` → `https://mateovandamme.com` (301)
