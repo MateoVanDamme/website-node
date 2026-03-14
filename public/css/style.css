@@ -9,7 +9,8 @@
     --border: #333;
 }
 
-html { font-size: 16px; }
+html { font-size: 14px; }
+@media (min-width: 768px) { html { font-size: 16px; } }
 
 body {
     background: var(--bg);
@@ -49,6 +50,8 @@ nav {
     top: 0;
     background: var(--bg);
     z-index: 10;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .nav-brand { margin-right: 1rem; display: flex; align-items: center; padding: 0.6rem 0; }
@@ -57,6 +60,7 @@ nav {
 nav a {
     border-bottom: none;
     padding: 0.6rem 1.1rem;
+    flex-shrink: 0;
     color: var(--muted);
     font-size: 0.85rem;
     font-weight: bold;
@@ -75,7 +79,8 @@ nav a.active {
 }
 
 /* Layout */
-.container-fluid { padding: 2rem 4rem; }
+.container-fluid { padding: 2rem 0.75rem; }
+@media (min-width: 768px) { .container-fluid { padding: 2rem 4rem; } }
 
 /* Buttons */
 .btn {
