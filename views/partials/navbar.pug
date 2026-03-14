@@ -8,16 +8,11 @@
     { name: 'Art', path: '/art' },
   ];
 
-nav.navbar.navbar-expand-lg.bg-dark.navbar-dark
-  .container-fluid
-    a.navbar-brand(href="/") Mateo Van Damme
-    button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-      span.navbar-toggler-icon
-    #navbarNav.collapse.navbar-collapse
-      ul.navbar-nav
-        each item in navItems
-          li.nav-item
-            if item.external
-              a.nav-link(href=item.path target="_blank" rel="noopener noreferrer")= item.name
-            else
-              a.nav-link(href=item.path class=(activePage === item.name ? 'active' : ''))= item.name
+nav
+  a.nav-brand(href="/")
+    img(src="/logo.svg" alt="Mateo Van Damme" height="22")
+  each item in navItems
+    if item.external
+      a(href=item.path target="_blank" rel="noopener noreferrer")= item.name
+    else
+      a(href=item.path class=(activePage === item.name ? 'active' : ''))= item.name

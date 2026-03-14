@@ -37,7 +37,7 @@ router.get('/art', (req, res) => {
 router.get('/hackerspace', (req, res) => {
   res.render('pages/hackerspace', {
     title: 'Hackerspace Gent Website',
-    activePage: ''
+    activePage: 'Node Project'
   });
 });
 
