@@ -198,7 +198,7 @@ colored { color: var(--accent); }
 .row { display: flex; flex-wrap: wrap; row-gap: 3rem; column-gap: 2rem; }
 [class*="col-"] { flex: 1 1 240px; min-width: 0; }
 @media (min-width: 992px) {
-    .col-lg-3 { flex: 0 0 calc(25%  - 0.75rem); }
-    .col-lg-4 { flex: 0 0 calc(33%  - 0.75rem); }
-    .col-lg-9 { flex: 0 0 calc(75%  - 0.75rem); }
+    .col-lg-3 { flex: 0 0 calc(25% - 0.5rem); }
+    .col-lg-4 { flex: 0 0 calc(33.33% - 1.34rem); }
+    .col-lg-9 { flex: 0 0 calc(75% - 1.5rem); }
 }
