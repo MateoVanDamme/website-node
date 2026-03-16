@@ -1,0 +1,40 @@
+extends ../layout
+
+block variables
+  - pageTitle = "Hackerspace"
+  - pageDescription = "My projects for Hackerspace Gent (0x20) — the website and the internal board dashboard."
+
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Hackerspace Gent Projects",
+      "description": "Projects built for Hackerspace Gent (0x20) — the community website and the internal board dashboard.",
+      "url": "https://mateovandamme.com/hackerspace",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" }
+    }
+
+block content
+  .d-flex.flex-column.mb-5
+    p.lead.text-center
+      | Projects I built for Hackerspace Gent (0x20), a community space for hackers, makers, and tinkerers in Ghent.
+      br
+      | Member since 2022, board member and webmaster since 2025.
+
+  section.masonry-grid
+    article.card.clickable(onclick="window.location.href='/hackerspace/website'")
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/hackerspace-gent-website.png" alt="Hackerspace Gent Website" style="object-fit: cover; max-height: 300px;")
+      .card-body
+        h5.card-title Hackerspace Gent Website
+        p.card-text
+          | The public website for Hackerspace Gent. Built with Node.js and Express, featuring a markdown-powered event system and GitHub Actions for CI/CD.
+        p.tags Topics: Node.js, Express, Pug, Azure, GitHub Actions
+
+    article.card.clickable(onclick="window.location.href='/board-dashboard'")
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/dashboard-bar-censored2.png" alt="0x20 Board Dashboard" style="object-fit: cover; max-height: 300px;")
+      .card-body
+        h5.card-title 0x20 Board Dashboard
+        p.card-text
+          | Internal financial dashboard for the 0x20 board. Tracks bar tab balances, membership payments, and the hackerspace treasury. LAN-only with GitHub OAuth.
+        p.tags Topics: FastAPI, React, TypeScript, Beancount, GitHub OAuth

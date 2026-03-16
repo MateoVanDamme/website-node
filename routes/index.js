@@ -33,11 +33,19 @@ router.get('/art', (req, res) => {
   });
 });
 
-// Hackerspace Gent Website
+// Hackerspace hub
 router.get('/hackerspace', (req, res) => {
+  res.render('pages/hackerspace-hub', {
+    title: 'Hackerspace',
+    activePage: 'Hackerspace'
+  });
+});
+
+// Hackerspace Gent Website detail
+router.get('/hackerspace/website', (req, res) => {
   res.render('pages/hackerspace', {
     title: 'Hackerspace Gent Website',
-    activePage: 'Node Project'
+    activePage: 'Hackerspace'
   });
 });
 
@@ -45,7 +53,7 @@ router.get('/hackerspace', (req, res) => {
 router.get('/board-dashboard', (req, res) => {
   res.render('pages/board-dashboard', {
     title: 'Board Dashboard',
-    activePage: 'Board Dashboard'
+    activePage: 'Hackerspace'
   });
 });
 

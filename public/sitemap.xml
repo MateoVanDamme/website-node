@@ -26,6 +26,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mateovandamme.com/hackerspace/website</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mateovandamme.com/board-dashboard</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
