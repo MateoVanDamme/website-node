@@ -1,0 +1,182 @@
+:root {
+  --accent: #DC143C;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+.flyover-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://storage.googleapis.com/mateo-website-bucket/flyover-ghent-hero.jpg') center top / cover no-repeat;
+  z-index: -1;
+  opacity: var(--hero-opacity, 1);
+}
+
+.flyover-page .fp-title {
+  color: var(--accent);
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.flyover-page .fp-hero-title {
+  margin-top: 35vh;
+}
+
+.flyover-page .fp-btn {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+}
+
+.flyover-page .fp-btn-gh {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.flyover-page .card {
+  background: rgba(60, 10, 15, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.flyover-page .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Projects row */
+.flyover-page .fp-projects-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.flyover-page .fp-projects-row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Drone 3D viewer */
+.flyover-page #drone-viewer {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 2rem;
+}
+
+/* Data row */
+.flyover-page .fp-data-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.flyover-page .fp-data-row .fp-data-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.flyover-page .fp-data-row .fp-map {
+  width: 50%;
+  object-fit: contain;
+  padding: 0;
+  border: none;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+/* Pipeline */
+.flyover-page .pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.75rem;
+}
+
+.flyover-page .pipeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flyover-page .pipeline-box {
+  background: #111;
+  border: 1px solid #444;
+  padding: 0.4rem 0.75rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.flyover-page .pipeline-format {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.flyover-page .pipeline-tool {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.flyover-page .pipeline-arrow {
+  color: #444;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  line-height: 1.4;
+}
+
+.flyover-page .pipeline-label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Features & controls */
+.flyover-page .feature-label {
+  color: var(--accent);
+}
+
+.flyover-page .controls-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.flyover-page .controls-grid kbd {
+  background: #111;
+  border: 1px solid #444;
+  padding: 0.1rem 0.4rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-align: center;
+  min-width: 2rem;
+  display: inline-block;
+}
+
+.flyover-page .controls-grid span {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .flyover-page .fp-projects-row,
+  .flyover-page .fp-data-row {
+    flex-direction: column;
+  }
+  .flyover-page .fp-data-row .fp-map {
+    width: 100%;
+  }
+}

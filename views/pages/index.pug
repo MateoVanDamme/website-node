@@ -143,6 +143,17 @@ block content
         p.card-text In my spare time I also enjoy 3D modeling as a creative outlet. My main focus are functional parts: parts for my telescope, holders, rasppberry pi cases etc...
         p.tags Topics: CAD-modeling, Fusion360, creativity, design, usability
 
+    //- Flyover Ghent
+    article.card.clickable(onclick="window.location.href='/art/flyover-ghent'")
+      video.card-img-top.card-video(autoplay loop muted playsinline)
+        source(src="https://storage.googleapis.com/mateo-website-bucket/art-videos/flyoverghent.mp4")
+        | Your browser does not support the video tag.
+      .card-body
+        h5.card-title Flyover Ghent
+        p.lead Open-source 3D art
+        p.card-text Fly through a 3D model of Ghent built from real municipal open data. Features autonomous drone flocking and free-flight exploration of 150+ city tiles.
+        p.tags Topics: Three.js, open-data, boid-flocking, 3D-visualization, Python
+
     //- Art
     article.card.clickable.text-center(onclick="window.location.href='/art'")
       video.card-img-top.card-video(autoplay loop muted playsinline)

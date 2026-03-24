@@ -49,6 +49,14 @@ router.get('/hackerspace/website', (req, res) => {
   });
 });
 
+// Flyover Ghent detail
+router.get('/art/flyover-ghent', (req, res) => {
+  res.render('pages/flyover-ghent', {
+    title: 'Flyover Ghent',
+    activePage: 'Art'
+  });
+});
+
 // Board Dashboard
 router.get('/board-dashboard', (req, res) => {
   res.render('pages/board-dashboard', {
