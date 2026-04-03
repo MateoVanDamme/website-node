@@ -68,7 +68,7 @@ block content
       .card-body
         h5.card-title Two-Chip Architecture
         p.card-text
-          | The project uses two microcontrollers connected via UART at 9600 baud:
+          | The LED bar runs on 5V logic, but the ESP32-C3 only outputs 3.3V. Rather than using level shifters, the work is split across two chips — the ESP32-C3 handles WiFi and serves the API, while the Arduino Uno drives the display at the correct voltage. They communicate over UART at 9600 baud:
         .feature-list
           .feature-item
             span.feature-label
