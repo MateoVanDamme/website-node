@@ -1,0 +1,94 @@
+extends ../layout
+
+block variables
+  - pageTitle = "LED-BARt"
+  - pageDescription = "WiFi-connected LED bar display for Hackerspace Gent — a two-microcontroller system with a web interface to control a 5x7 pixel LED display over the LAN."
+
+block extra_head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "LED-BARt",
+      "description": "WiFi-connected LED bar display for Hackerspace Gent. Two-microcontroller architecture with web interface.",
+      "url": "https://mateovandamme.com/hackerspace/ledbart",
+      "codeRepository": "https://github.com/0x20/LED-BARt",
+      "author": { "@type": "Person", "name": "Mateo Van Damme" }
+    }
+
+block content
+  .d-flex.flex-column.mb-5
+    h1.text-center LED-BARt
+    p.lead.text-center
+      | A WiFi-connected LED bar display for the hackerspace.
+      br
+      | Type a message in the web interface, and it shows up on the physical 5×7 pixel LED display.
+
+    .d-flex.gap-2(style="justify-content: center; margin-top: 1rem;")
+      a.btn(href="https://0x20.github.io/LED-BARt/" target="_blank" rel="noopener noreferrer") Live Demo
+      a.btn(href="https://github.com/0x20/LED-BARt" target="_blank" rel="noopener noreferrer")
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+          path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+        | GitHub
+
+  section.masonry-grid
+    article.card
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/ledbart-demo.jpg" alt="LED-BARt demo" style="object-fit: cover; max-height: 300px;")
+      .card-body
+        h5.card-title LED Bar Display
+        p.card-text
+          | The bar was salvaged from outside a train station — one of those old departure/arrival displays. It found a new home at the hackerspace.
+        .feature-list
+          .feature-item
+            span.feature-label 5×7 pixel dot matrix
+            span  — 19 characters max width
+          .feature-item
+            span.feature-label Custom 5×7 bitmap font
+            span  — embedded in both firmware and web preview
+          .feature-item
+            span.feature-label Shift register multiplexing
+            span  — direct bit-banging on Arduino
+          .feature-item
+            span.feature-label 12V input
+            span  — internal stepdown to 5V
+
+    article.card
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/ledbart-frontend.png" alt="LED-BARt web interface showing hello world on the pixel display" style="object-fit: cover; max-height: 350px;")
+      .card-body
+        h5.card-title Web Interface
+        p.card-text
+          | A static web interface that sends curl commands to the ESP32-C3 webserver. Features a pixel-perfect canvas preview using the same 5×7 font as the hardware. Only works on the hackerspace LAN.
+        a(href="https://0x20.github.io/LED-BARt/" target="_blank" rel="noopener noreferrer") Open Web Interface
+        p.card-text(style="margin-top: 1rem;") If you're on the LAN, try it yourself:
+        pre(style="background: #111; padding: 0.75rem; white-space: pre-wrap; word-break: break-all;")
+          code curl -X POST http://ledbart.local/text -H "Content-Type: text/plain" -d "YOUR TEXT"
+
+    article.card
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/ledbart-schematic.png" alt="Wiring diagram showing ESP32-C3 connected to Arduino Uno via UART" style="object-fit: contain; max-height: 400px; background: #fff; padding: 1rem;")
+      .card-body
+        h5.card-title Two-Chip Architecture
+        p.card-text
+          | The project uses two microcontrollers connected via UART at 9600 baud:
+        .feature-list
+          .feature-item
+            span.feature-label Xiao ESP32-C3
+            span  — WiFi + web server (3.3V)
+          .feature-item
+            span.feature-label Arduino Uno
+            span  — LED display driver (5V)
+          .feature-item
+            span.feature-label mDNS discovery
+            span  — accessible as ledbart.local
+
+    article.card
+      .card-body
+        h5.card-title ESP32-C3 Webserver
+        p.card-text
+          | Runs on the ESP32-C3, accessible at #[code ledbart.local] on the hackerspace LAN. When text is received, it forwards it to the Arduino via UART TX. Exposes two endpoints:
+        .feature-list
+          .feature-item
+            span.feature-label POST /text
+            span  — send plain text body, displays it on the bar
+          .feature-item
+            span.feature-label GET /log
+            span  — returns recent activity log

@@ -57,6 +57,14 @@ router.get('/art/flyover-ghent', (req, res) => {
   });
 });
 
+// LED-BARt
+router.get('/hackerspace/ledbart', (req, res) => {
+  res.render('pages/ledbart', {
+    title: 'LED-BARt',
+    activePage: 'Hackerspace'
+  });
+});
+
 // Board Dashboard
 router.get('/board-dashboard', (req, res) => {
   res.render('pages/board-dashboard', {

@@ -2,7 +2,7 @@ extends ../layout
 
 block variables
   - pageTitle = "Hackerspace"
-  - pageDescription = "My projects for Hackerspace Gent (0x20) — the website and the internal board dashboard."
+  - pageDescription = "My projects for Hackerspace Gent (0x20) — the website, board dashboard, and LED-BARt display."
 
 block extra_head
   script(type="application/ld+json").
@@ -38,3 +38,11 @@ block content
         p.card-text
           | Internal financial dashboard for the 0x20 board. Tracks bar tab balances, membership payments, and the hackerspace treasury. LAN-only with GitHub OAuth.
         p.tags Topics: FastAPI, React, TypeScript, Beancount, GitHub OAuth
+
+    article.card.clickable(onclick="window.location.href='/hackerspace/ledbart'")
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/ledbart-demo.jpg" alt="LED-BARt web interface" style="object-fit: cover; max-height: 300px;")
+      .card-body
+        h5.card-title LED-BARt
+        p.card-text
+          | WiFi-connected LED bar display for the hackerspace. Two-microcontroller system (ESP32-C3 + Arduino Uno) with a web interface to send text to a 5×7 pixel LED display over the LAN.
+        p.tags Topics: ESP32-C3, Arduino Uno, C/C++, UART, Vanilla JS

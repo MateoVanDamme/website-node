@@ -96,6 +96,15 @@ block content
             .feature-item
               span.feature-label Python pipeline
               span  DWG→DXF→STL preprocessing
+            .feature-item
+              span.feature-label 3-tier tile caching
+              span  Service Worker → memory → scene
+            .feature-item
+              span.feature-label Direction-aware loading
+              span  only fetches tiles the camera faces
+            .feature-item
+              span.feature-label Live minimap
+              span  color-coded tile readiness
           h6.mt-3(style="color: var(--accent);") Controls
           .controls-grid
             kbd WASD
@@ -108,6 +117,27 @@ block content
             span Toggle debug info
           p.card-text.small.text-muted(style="margin-top: 1.5rem;")
             | Built with Three.js. Python preprocessing with ODA File Converter, ezdxf, and trimesh. Lambert-72 coordinates.
+
+    h1.fp-title Map Caching
+    article.card(style="max-width: 50%;")
+      .card-body
+        h5.card-title Direction-Aware Tile Caching
+        p.card-text.mb-3
+          | Caching to speed up loading times, takes into account camera direction and position. Tiles persist between sessions so revisited areas load instantly.
+        h6.mt-3(style="color: var(--accent);") Tile States
+        .controls-grid
+          .tile-swatch(style="background: #551100; width: 16px; height: 16px; display: inline-block;")
+          span Available — exists in dataset, never fetched
+          .tile-swatch(style="background: #882200; width: 16px; height: 16px; display: inline-block;")
+          span SW Cached — stored in browser cache
+          .tile-swatch(style="background: #cc3300; width: 16px; height: 16px; display: inline-block;")
+          span In Memory — geometry parsed, ready to re-add
+          .tile-swatch(style="background: #ff8800; width: 16px; height: 16px; display: inline-block;")
+          span Loading — fetch in-flight
+          .tile-swatch(style="background: #ffee55; width: 16px; height: 16px; display: inline-block;")
+          span Visible — rendered in scene
+        .tech-icons
+          img(src="https://storage.googleapis.com/mateo-website-bucket/flyover-ghent-map-caching.png" alt="Minimap showing tile cache states" style="image-rendering: pixelated; height: 20rem;")
 
     h1.fp-title Data & Pipeline
     .fp-data-row
