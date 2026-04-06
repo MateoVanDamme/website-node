@@ -53,7 +53,7 @@ block content
             span  — internal stepdown to 5V
 
     article.card
-      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/ledbart-frontend.png" alt="LED-BARt web interface showing hello world on the pixel display" style="object-fit: cover; max-height: 350px;")
+      img.card-img-top(src="https://storage.googleapis.com/mateo-website-bucket/ledbart-frontend2.png" alt="LED-BARt web interface" style="object-fit: cover; max-height: 350px;")
       .card-body
         h5.card-title Web Interface
         p.card-text
@@ -86,11 +86,17 @@ block content
       .card-body
         h5.card-title ESP32-C3 Webserver
         p.card-text
-          | Runs on the ESP32-C3, accessible at #[code ledbart.local] on the hackerspace LAN. When text is received, it forwards it to the Arduino via UART TX. Exposes two endpoints:
+          | Runs on the ESP32-C3, accessible at #[code ledbart.local] on the hackerspace LAN. When text is received, it forwards it to the Arduino via UART TX. Also exposes a WebSocket on port 81 for streaming raw pixel data in real time.
         .feature-list
           .feature-item
             span.feature-label POST /text
-            span  — send plain text body, displays it on the bar
+            span  — send plain text (max 19 chars), rendered with the 5×7 font
+          .feature-item
+            span.feature-label POST /pixels
+            span  — send 190 hex chars (95 raw column bytes) for full pixel control
+          .feature-item
+            span.feature-label WS :81
+            span  — binary WebSocket, 95 bytes per frame
           .feature-item
             span.feature-label GET /log
-            span  — returns recent activity log
+            span  — recent activity log
