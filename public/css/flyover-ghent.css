@@ -53,6 +53,15 @@ body {
   flex-direction: column;
 }
 
+.flyover-page .fp-card-img {
+  display: block;
+  width: calc(100% + 1.5rem);
+  max-width: none;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-bottom: 1rem;
+}
+
 /* Projects row */
 .flyover-page .fp-projects-row {
   display: flex;
@@ -68,8 +77,8 @@ body {
 /* Drone 3D viewer */
 .flyover-page #drone-viewer {
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 600px;
   margin: 0 auto 2rem;
 }
 

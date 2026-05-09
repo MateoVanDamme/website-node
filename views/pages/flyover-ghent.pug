@@ -15,66 +15,29 @@ block extra_head
       "url": "https://mateovandamme.com/art/flyover-ghent",
       "author": { "@type": "Person", "name": "Mateo Van Damme" },
       "hasPart": [
+        { "@type": "SoftwareSourceCode", "name": "Fly Over Gent", "url": "https://fly.mateovandamme.com/", "codeRepository": "https://github.com/MateoVanDamme/fly-over-gent" },
         { "@type": "SoftwareSourceCode", "name": "Drones Over Ghent", "url": "https://flyover.mateovandamme.com/", "codeRepository": "https://github.com/MateoVanDamme/drones-over-ghent" },
-        { "@type": "SoftwareSourceCode", "name": "Fly Over Gent", "url": "https://fly.mateovandamme.com/", "codeRepository": "https://github.com/MateoVanDamme/fly-over-gent" }
+        { "@type": "SoftwareSourceCode", "name": "Print Ghent", "url": "https://print-gent.mateovandamme.com/", "codeRepository": "https://github.com/MateoVanDamme/print-ghent" }
       ]
     }
 
 block content
   .flyover-page
     h1.fp-title.fp-hero-title Flyover Ghent
-    h5.card-title Open-source 3D art built on real city data. Both projects use the "Gent in 3D" dataset from #[a(href="https://data.stad.gent/" target="_blank" rel="noopener noreferrer") data.stad.gent] to render the city of Ghent in the browser using Three.js.
+    h5.card-title Open-source 3D art built on real city data. All three projects use the "Gent in 3D" dataset from #[a(href="https://data.stad.gent/" target="_blank" rel="noopener noreferrer") data.stad.gent] to render the city of Ghent. Two run in the browser using Three.js, one outputs a slicer-ready STL ready for 3D printing.
 
     p.fp-manifesto(style="margin-top: 1rem; margin-bottom: 0;") As presented at #[a(href="https://nerdlab.be/byob" target="_blank" rel="noopener noreferrer" style="color: var(--accent);") BYOB 2025]
 
     .d-flex.gap-2(style="margin-top: 1.5rem;")
-      a.btn.fp-btn(href="https://flyover.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Drones Over Ghent
       a.btn.fp-btn(href="https://fly.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Fly Over Gent
+      a.btn.fp-btn(href="https://flyover.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Drones Over Ghent
+      a.btn.fp-btn(href="https://print-gent.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Print Ghent
 
     div(style="margin-bottom: 28rem;")
 
     canvas#drone-viewer
     h1.fp-title Projects
     .fp-projects-row
-      article.card
-        .card-body
-          h5.card-title Drones Over Ghent
-          .d-flex.gap-2.mb-3
-            a.btn.fp-btn(href="https://flyover.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Live Demo
-            a.btn.fp-btn-gh(href="https://github.com/MateoVanDamme/drones-over-ghent" target="_blank" rel="noopener noreferrer")
-              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
-                path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
-              | GitHub
-          p.card-text.mb-3
-            | Autonomous drone flocking over a 3D model of Ghent. Drones use boid algorithms to exhibit natural swarming behavior above the city skyline.
-          .feature-list
-            .feature-item
-              span.feature-label Boid flocking
-              span  with autonomous agents
-            .feature-item
-              span.feature-label 4 camera modes
-              span  follow, chase, orbit, free-flight
-            .feature-item
-              span.feature-label Real-time GUI
-              span  controls for tweaking parameters
-          h6.mt-3(style="color: var(--accent);") Controls
-          .controls-grid
-            kbd 1 2 3 4
-            span Camera: follow / chase / orbit / manual
-            kbd Tab
-            span Cycle to next drone
-            kbd WASD
-            span Move (manual mode)
-            kbd Space / Shift
-            span Fly up / down
-            kbd Mouse
-            span Look around
-            kbd I
-            span Toggle debug info
-            kbd P
-            span Respawn drones
-          p.card-text.small.text-muted(style="margin-top: 1.5rem;")
-            | Built with Three.js and vanilla JavaScript.
       article.card
         .card-body
           h5.card-title Fly Over Gent
@@ -86,6 +49,7 @@ block content
               | GitHub
           p.card-text.mb-3
             | Free-flight through all of Ghent using official municipal 3D data. Explore 150+ tiles of the city with WASD controls.
+          img.fp-card-img(src="https://storage.googleapis.com/mateo-website-bucket/flyover-zoomed-out-small.webp" alt="Zoomed-out view of Ghent in Fly Over Gent")
           .feature-list
             .feature-item
               span.feature-label WASD free-flight
@@ -105,18 +69,62 @@ block content
             .feature-item
               span.feature-label Live minimap
               span  color-coded tile readiness
-          h6.mt-3(style="color: var(--accent);") Controls
-          .controls-grid
-            kbd WASD
-            span Move around
-            kbd Space / Shift
-            span Fly up / down
-            kbd Mouse
-            span Look around
-            kbd I
-            span Toggle debug info
           p.card-text.small.text-muted(style="margin-top: 1.5rem;")
             | Built with Three.js. Python preprocessing with ODA File Converter, ezdxf, and trimesh. Lambert-72 coordinates.
+      article.card
+        .card-body
+          h5.card-title Drones Over Ghent
+          .d-flex.gap-2.mb-3
+            a.btn.fp-btn(href="https://flyover.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Live Demo
+            a.btn.fp-btn-gh(href="https://github.com/MateoVanDamme/drones-over-ghent" target="_blank" rel="noopener noreferrer")
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+                path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+              | GitHub
+          p.card-text.mb-3
+            | Autonomous drone flocking over a 3D model of Ghent. Drones use boid algorithms to exhibit natural swarming behavior above the city skyline.
+          img.fp-card-img(src="https://storage.googleapis.com/mateo-website-bucket/flyover-ghent-hero-small.webp" alt="Drones flocking above the city of Ghent")
+          .feature-list
+            .feature-item
+              span.feature-label Boid flocking
+              span  with autonomous agents
+            .feature-item
+              span.feature-label 4 camera modes
+              span  follow, chase, orbit, free-flight
+            .feature-item
+              span.feature-label Real-time GUI
+              span  controls for tweaking parameters
+          p.card-text.small.text-muted(style="margin-top: 1.5rem;")
+            | Built with Three.js and vanilla JavaScript.
+      article.card
+        .card-body
+          h5.card-title Print Ghent
+          .d-flex.gap-2.mb-3
+            a.btn.fp-btn(href="https://print-gent.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Live Demo
+            a.btn.fp-btn-gh(href="https://github.com/MateoVanDamme/print-ghent" target="_blank" rel="noopener noreferrer")
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+                path(d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z")
+              | GitHub
+          p.card-text.mb-3
+            | Pick an area on the map, get a printable slab of the city. Free, no signup, runs entirely in your browser. Uses the same tiles as Fly Over Gent so the whole Ghent dataset is available to crop from.
+          img.fp-card-img(src="https://storage.googleapis.com/mateo-website-bucket/print-korenmarkt-small.webp" alt="3D printed slab of the Korenmarkt area in Ghent")
+          .feature-list
+            .feature-item
+              span.feature-label Map selection
+              span  Shift-drag for square, Alt for freeform
+            .feature-item
+              span.feature-label Watertight slab
+              span  plane-clipped terrain + 4 walls + flat bottom
+            .feature-item
+              span.feature-label Drop edge buildings
+              span  optional clean cut along the bbox
+            .feature-item
+              span.feature-label Configurable base
+              span  set slab thickness in meters
+            .feature-item
+              span.feature-label Pure browser pipeline
+              span  no backend, STLExporter output
+          p.card-text.small.text-muted(style="margin-top: 1.5rem;")
+            | Built with Three.js, Leaflet, and proj4. Tiles served from the same GCS bucket as Fly Over Gent.
 
     h1.fp-title Data & Pipeline
     .fp-data-row
