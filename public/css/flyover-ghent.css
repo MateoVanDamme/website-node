@@ -179,9 +179,15 @@ body {
   color: #ccc;
 }
 
+/* Stack project cards on anything narrower than a wide desktop */
+@media (max-width: 1200px) {
+  .flyover-page .fp-projects-row {
+    flex-direction: column;
+  }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
-  .flyover-page .fp-projects-row,
   .flyover-page .fp-data-row {
     flex-direction: column;
   }
