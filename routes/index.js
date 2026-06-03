@@ -49,12 +49,17 @@ router.get('/hackerspace/website', (req, res) => {
   });
 });
 
-// Flyover Ghent detail
-router.get('/art/flyover-ghent', (req, res) => {
+// Flyover Ghent
+router.get('/flyover-ghent', (req, res) => {
   res.render('pages/flyover-ghent', {
     title: 'Flyover Ghent',
-    activePage: 'Art'
+    activePage: 'Flyover Ghent'
   });
+});
+
+// Redirect old nested URL to the new top-level page
+router.get('/art/flyover-ghent', (req, res) => {
+  res.redirect(301, '/flyover-ghent');
 });
 
 // LED-BARt

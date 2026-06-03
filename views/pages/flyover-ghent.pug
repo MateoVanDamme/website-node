@@ -12,7 +12,7 @@ block extra_head
       "@type": "CreativeWork",
       "name": "Flyover Ghent",
       "description": "Open-source 3D art using real city data from Ghent's open data portal.",
-      "url": "https://mateovandamme.com/art/flyover-ghent",
+      "url": "https://mateovandamme.com/flyover-ghent",
       "author": { "@type": "Person", "name": "Mateo Van Damme" },
       "hasPart": [
         { "@type": "SoftwareSourceCode", "name": "Fly Over Gent", "url": "https://fly.mateovandamme.com/", "codeRepository": "https://github.com/MateoVanDamme/fly-over-gent" },
@@ -26,7 +26,7 @@ block content
     h1.fp-title.fp-hero-title Flyover Ghent
     h5.card-title Open-source 3D art built on real city data. All three projects use the "Gent in 3D" dataset from #[a(href="https://data.stad.gent/" target="_blank" rel="noopener noreferrer") data.stad.gent] to render the city of Ghent. Two run in the browser using Three.js, one outputs a slicer-ready STL ready for 3D printing.
 
-    p.fp-manifesto(style="margin-top: 1rem; margin-bottom: 0;") As presented at #[a(href="https://nerdlab.be/byob" target="_blank" rel="noopener noreferrer" style="color: var(--accent);") BYOB 2025]
+    p.fp-manifesto(style="margin-top: 1rem; margin-bottom: 0;") As presented at #[a(href="https://nerdlab.be/byob" target="_blank" rel="noopener noreferrer" style="color: var(--accent);") BYOB 2025] and #[a(href="https://youtu.be/xc4Iyvu9Rns" target="_blank" rel="noopener noreferrer" style="color: var(--accent);") Newline 2026]
 
     .d-flex.gap-2(style="margin-top: 1.5rem;")
       a.btn.fp-btn(href="https://fly.mateovandamme.com/" target="_blank" rel="noopener noreferrer") Fly Over Gent
@@ -125,6 +125,33 @@ block content
               span  no backend, STLExporter output
           p.card-text.small.text-muted(style="margin-top: 1.5rem;")
             | Built with Three.js, Leaflet, and proj4. Tiles served from the same GCS bucket as Fly Over Gent.
+
+    h1.fp-title The Talk
+    .fp-projects-row
+      article.card
+        .card-body
+          h5.card-title Flying, Flocking, and Printing Ghent
+          p.card-text.mb-3
+            | My talk at #[a(href="https://newline.gent/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);") Newline 2026].
+          .ratio.ratio-16x9
+            iframe(src="https://www.youtube.com/embed/xc4Iyvu9Rns" title="Newline 2026 — Flying, Flocking, and Printing Ghent" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+      article.card
+        .card-body
+          h5.card-title Slides
+          p.card-text.mb-3
+            | The slide deck from the talk. Grab the annotated version below if you want the speaker notes alongside each slide.
+          .ratio.ratio-16x9
+            iframe(src="https://storage.googleapis.com/mateo-website-bucket/fly-over/Newline%202026%20-%20Flying%2C%20Flocking%2C%20and%20Printing%20Ghent2.pdf" frameborder="0")
+          .d-flex.gap-2(style="margin-top: 1rem;")
+            a.btn.fp-btn(href="https://storage.googleapis.com/mateo-website-bucket/fly-over/Newline%202026%20-%20Flying%2C%20Flocking%2C%20and%20Printing%20Ghent2.pdf" target="_blank" rel="noopener noreferrer")
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;")
+                path(d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z")
+              | Open fullscreen
+            a.btn.fp-btn(href="https://storage.googleapis.com/mateo-website-bucket/fly-over/Newline%202026%20-%20Flying%2C%20Flocking%2C%20and%20Printing%20Ghent%20-%20Notes.pdf" target="_blank" rel="noopener noreferrer")
+              svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16" style="margin-right: 6px;")
+                path(fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z")
+              | Slides with notes (PDF)
 
     h1.fp-title Data & Pipeline
     .fp-data-row

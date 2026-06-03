@@ -43,9 +43,8 @@ body {
 }
 
 .flyover-page .card {
-  background: rgba(60, 10, 15, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: transparent;
+  border: none;
 }
 
 .flyover-page .card-body {
